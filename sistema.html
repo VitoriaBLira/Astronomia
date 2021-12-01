@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Astronomia</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="css.css">
+<link rel="stylesheet" href="java.js">
+</head>
+<body>
+    <!-- começo da nav -->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark fs-5 " style="background-color: #010116; ">
+        <div class="container-fluid" >
+            
+                <a class="navbar-brand" href="#">
+                  <img src="images/unnamed.jpg" width="35" height="35" class="d-inline-block align-top" alt="">
+                  Astronomia
+                </a>
+            <div class="left">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-right " id="navbarNavDropdown">
+                <ul class="navbar-nav ">
+                    <li class="nav-item ">
+                        <a class="nav-link text-white" aria-current="page" href="home.html">Home</a>
+                    </li>
+                  
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="sistema.html">Sistema Solar</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="constelacao.html">Constelação</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="ob.html">observatório</a>
+                    </li>
+                </ul>
+            
+            </div>
+        </div>
+    </nav>
+   <!-- This site uses the Google Analytics by ExactMetrics plugin v6.5.0 - Using Analytics tracking - https://www.exactmetrics.com/ -->
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" data-cfasync="false">
+        (window.gaDevIds=window.gaDevIds||[]).push("dNDMyYj");
+        var em_version         = '6.5.0';
+        var em_track_user      = true;
+        var em_no_track_reason = '';
+        
+        var disableStr = 'ga-disable-UA-151886698-1';
+    
+        /* Function to detect opted out users */
+        function __gaTrackerIsOptedOut() {
+            return document.cookie.indexOf(disableStr + '=true') > -1;
+        }
+    
+        /* Disable tracking if the opt-out cookie exists. */
+        if ( __gaTrackerIsOptedOut() ) {
+            window[disableStr] = true;
+        }
+    
+        /* Opt-out function */
+        function __gaTrackerOptout() {
+          document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+          window[disableStr] = true;
+        }
+    
+        if ( 'undefined' === typeof gaOptout ) {
+            function gaOptout() {
+                __gaTrackerOptout();
+            }
+        }
+        
+        if ( em_track_user ) {
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+    
+    window.ga = __gaTracker;		__gaTracker('create', 'UA-151886698-1', 'auto');
+            __gaTracker('set', 'forceSSL', true);
+            __gaTracker('send','pageview');
+            __gaTracker( function() { window.ga = __gaTracker; } );
+        } else {
+            console.log( "" );
+            (function() {
+                /* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+                var noopfn = function() {
+                    return null;
+                };
+                var noopnullfn = function() {
+                    return null;
+                };
+                var Tracker = function() {
+                    return null;
+                };
+                var p = Tracker.prototype;
+                p.get = noopfn;
+                p.set = noopfn;
+                p.send = noopfn;
+                var __gaTracker = function() {
+                    var len = arguments.length;
+                    if ( len === 0 ) {
+                        return;
+                    }
+                    var f = arguments[len-1];
+                    if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+                        console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + em_no_track_reason );
+                        return;
+                    }
+                    try {
+                        f.hitCallback();
+                    } catch (ex) {
+    
+                    }
+                };
+                __gaTracker.create = function() {
+                    return new Tracker();
+                };
+                __gaTracker.getByName = noopnullfn;
+                __gaTracker.getAll = function() {
+                    return [];
+                };
+                __gaTracker.remove = noopfn;
+                window['__gaTracker'] = __gaTracker;
+                window.ga = __gaTracker;		})();
+            }
+    </script>
+    <!-- / Google Analytics by ExactMetrics -->
+            <script>
+                window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.0.1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/astrolab.club\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.6.6"}};
+                !function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([55357,56424,8205,55356,57212],[55357,56424,8203,55356,57212])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+            </script><script src="https://astrolab.club/wp-includes/js/wp-emoji-release.min.js?ver=5.6.6" type="text/javascript" defer=""></script>
+            <style>
+    img.wp-smiley,
+    img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        height: 1em !important;
+        width: 1em !important;
+        margin: 0 .07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+    }
+    </style>
+        <link rel="stylesheet" id="astra-theme-css-css" href="" media="all">
+    <style id="astra-theme-css-inline-css">
+    html{font-size:93.75%;}a,.page-title{color:#d94948;}a:hover,a:focus{color:#000000;}body,button,input,select,textarea,.ast-button,.ast-custom-button{font-family:'Montserrat',sans-serif;font-weight:400;font-size:15px;font-size:1rem;text-transform:none;}blockquote{color:rgba(1,22,39,0.75);}h1,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6,.site-title,.site-title a{font-family:'Montserrat',sans-serif;font-weight:700;}.site-title{font-size:28px;font-size:1.8666666666667rem;}header .site-logo-img .custom-logo-link img{max-width:180px;}.astra-logo-svg{width:180px;}.ast-archive-description .ast-archive-title{font-size:40px;font-size:2.6666666666667rem;}.site-header .site-description{font-size:15px;font-size:1rem;}.entry-title{font-size:30px;font-size:2rem;}.comment-reply-title{font-size:24px;font-size:1.6rem;}.ast-comment-list #cancel-comment-reply-link{font-size:15px;font-size:1rem;}h1,.entry-content h1{font-size:70px;font-size:4.6666666666667rem;font-family:'Montserrat',sans-serif;text-transform:none;}h2,.entry-content h2{font-size:34px;font-size:2.2666666666667rem;font-family:'Montserrat',sans-serif;text-transform:none;}h3,.entry-content h3{font-size:23px;font-size:1.5333333333333rem;font-family:'Montserrat',sans-serif;text-transform:none;}h4,.entry-content h4{font-size:16px;font-size:1.0666666666667rem;}h5,.entry-content h5{font-size:14px;font-size:0.93333333333333rem;}h6,.entry-content h6{font-size:12px;font-size:0.8rem;}.ast-single-post .entry-title,.page-title{font-size:40px;font-size:2.6666666666667rem;}::selection{background-color:#d94948;color:#ffffff;}body,h1,.entry-title a,.entry-content h1,h2,.entry-content h2,h3,.entry-content h3,h4,.entry-content h4,h5,.entry-content h5,h6,.entry-content h6,.wc-block-grid__product-title{color:rgba(1,22,39,0.75);}.tagcloud a:hover,.tagcloud a:focus,.tagcloud a.current-item{color:#ffffff;border-color:#d94948;background-color:#d94948;}input:focus,input[type="text"]:focus,input[type="email"]:focus,input[type="url"]:focus,input[type="password"]:focus,input[type="reset"]:focus,input[type="search"]:focus,textarea:focus{border-color:#d94948;}input[type="radio"]:checked,input[type=reset],input[type="checkbox"]:checked,input[type="checkbox"]:hover:checked,input[type="checkbox"]:focus:checked,input[type=range]::-webkit-slider-thumb{border-color:#d94948;background-color:#d94948;box-shadow:none;}.site-footer a:hover + .post-count,.site-footer a:focus + .post-count{background:#d94948;border-color:#d94948;}.ast-comment-meta{line-height:1.666666667;font-size:12px;font-size:0.8rem;}.single .nav-links .nav-previous,.single .nav-links .nav-next,.single .ast-author-details .author-title,.ast-comment-meta{color:#d94948;}.entry-meta,.entry-meta *{line-height:1.45;color:#d94948;}.entry-meta a:hover,.entry-meta a:hover *,.entry-meta a:focus,.entry-meta a:focus *{color:#000000;}.ast-404-layout-1 .ast-404-text{font-size:200px;font-size:13.333333333333rem;}.widget-title{font-size:21px;font-size:1.4rem;color:rgba(1,22,39,0.75);}#cat option,.secondary .calendar_wrap thead a,.secondary .calendar_wrap thead a:visited{color:#d94948;}.secondary .calendar_wrap #today,.ast-progress-val span{background:#d94948;}.secondary a:hover + .post-count,.secondary a:focus + .post-count{background:#d94948;border-color:#d94948;}.calendar_wrap #today > a{color:#ffffff;}.ast-pagination a,.page-links .page-link,.single .post-navigation a{color:#d94948;}.ast-pagination a:hover,.ast-pagination a:focus,.ast-pagination > span:hover:not(.dots),.ast-pagination > span.current,.page-links > .page-link,.page-links .page-link:hover,.post-navigation a:hover{color:#000000;}.ast-header-break-point .ast-mobile-menu-buttons-minimal.menu-toggle{background:transparent;color:#ffffff;}.ast-header-break-point .ast-mobile-menu-buttons-outline.menu-toggle{background:transparent;border:1px solid #ffffff;color:#ffffff;}.ast-header-break-point .ast-mobile-menu-buttons-fill.menu-toggle{background:#ffffff;color:#000000;}.ast-header-break-point .main-header-bar .ast-button-wrap .menu-toggle{border-radius:0px;}.main-header-menu .menu-link,.ast-header-custom-item a{color:rgba(1,22,39,0.75);}.main-header-menu .menu-item:hover > .menu-link,.main-header-menu .menu-item:hover > .ast-menu-toggle,.main-header-menu .ast-masthead-custom-menu-items a:hover,.main-header-menu .menu-item.focus > .menu-link,.main-header-menu .menu-item.focus > .ast-menu-toggle,.main-header-menu .current-menu-item > .menu-link,.main-header-menu .current-menu-ancestor > .menu-link,.main-header-menu .current-menu-item > .ast-menu-toggle,.main-header-menu .current-menu-ancestor > .ast-menu-toggle{color:#d94948;}.ast-small-footer{color:rgba(255,255,255,0.5);}.ast-small-footer > .ast-footer-overlay{background-color:#011627;;}.ast-small-footer a{color:#ffffff;}.ast-small-footer a:hover{color:#dd3333;}.footer-adv .footer-adv-overlay{border-top-style:solid;border-top-color:#7a7a7a;}.wp-block-buttons.aligncenter{justify-content:center;}@media (max-width:782px){.entry-content .wp-block-columns .wp-block-column{margin-left:0px;}}@media (max-width:768px){.ast-separate-container .ast-article-post,.ast-separate-container .ast-article-single{padding:1.5em 2.14em;}.ast-separate-container #primary,.ast-separate-container #secondary{padding:1.5em 0;}#primary,#secondary{padding:1.5em 0;margin:0;}.ast-left-sidebar #content > .ast-container{display:flex;flex-direction:column-reverse;width:100%;}.ast-author-box img.avatar{margin:20px 0 0 0;}}@media (max-width:768px){.ast-right-sidebar #primary{padding-right:0;}.ast-pagination .prev.page-numbers{padding-left:.5em;}.ast-pagination .next.page-numbers{padding-right:.5em;}}@media (min-width:769px){.ast-separate-container.ast-right-sidebar #primary,.ast-separate-container.ast-left-sidebar #primary{border:0;}.ast-separate-container .ast-comment-list li .comment-respond{padding-left:2.66666em;padding-right:2.66666em;}.ast-author-box{-js-display:flex;display:flex;}.ast-author-bio{flex:1;}.error404.ast-separate-container #primary,.search-no-results.ast-separate-container #primary{margin-bottom:4em;}}@media (min-width:769px){.ast-right-sidebar #primary{border-right:1px solid #eee;}.ast-left-sidebar #primary{border-left:1px solid #eee;}}.menu-toggle,button,.ast-button,.ast-custom-button,.button,input#submit,input[type="button"],input[type="submit"],input[type="reset"]{color:#ffffff;border-color:#d94948;background-color:#d94948;border-radius:100px;padding-top:6px;padding-right:20px;padding-bottom:6px;padding-left:20px;font-family:inherit;font-weight:inherit;}button:focus,.menu-toggle:hover,button:hover,.ast-button:hover,.ast-custom-button:hover .button:hover,.ast-custom-button:hover,input[type=reset]:hover,input[type=reset]:focus,input#submit:hover,input#submit:focus,input[type="button"]:hover,input[type="button"]:focus,input[type="submit"]:hover,input[type="submit"]:focus{color:#ffffff;background-color:rgba(217,73,72,0.85);border-color:rgba(217,73,72,0.85);}@media (min-width:768px){.ast-container{max-width:100%;}}@media (min-width:544px){.ast-container{max-width:100%;}}@media (max-width:544px){.ast-separate-container .ast-article-post,.ast-separate-container .ast-article-single{padding:1.5em 1em;}.ast-separate-container #content .ast-container{padding-left:0.54em;padding-right:0.54em;}.ast-separate-container .comments-count-wrapper{padding:1.5em 1em;}.ast-separate-container .ast-comment-list li.depth-1{padding:1.5em 1em;margin-bottom:1.5em;}.ast-separate-container .ast-comment-list .bypostauthor{padding:.5em;}.ast-separate-container .ast-archive-description{padding:1.5em 1em;}.ast-search-menu-icon.ast-dropdown-active .search-field{width:170px;}.ast-separate-container .comment-respond{padding:1.5em 1em;}}@media (max-width:544px){.ast-comment-list .children{margin-left:0.66666em;}.ast-separate-container .ast-comment-list .bypostauthor li{padding:0 0 0 .5em;}}@media (max-width:768px){.ast-mobile-header-stack .main-header-bar .ast-search-menu-icon{display:inline-block;}.ast-header-break-point.ast-header-custom-item-outside .ast-mobile-header-stack .main-header-bar .ast-search-icon{margin:0;}.ast-comment-avatar-wrap img{max-width:2.5em;}.comments-area{margin-top:1.5em;}.ast-separate-container .comments-count-wrapper{padding:2em 2.14em;}.ast-separate-container .ast-comment-list li.depth-1{padding:1.5em 2.14em;}.ast-separate-container .comment-respond{padding:2em 2.14em;}}@media (max-width:768px){.ast-header-break-point .main-header-bar .ast-search-menu-icon.slide-search .search-form{right:0;}.ast-header-break-point .ast-mobile-header-stack .main-header-bar .ast-search-menu-icon.slide-search .search-form{right:-1em;}.ast-comment-avatar-wrap{margin-right:0.5em;}}@media (min-width:545px){.ast-page-builder-template .comments-area,.single.ast-page-builder-template .entry-header,.single.ast-page-builder-template .post-navigation{max-width:1210px;margin-left:auto;margin-right:auto;}}@media (max-width:768px){.ast-archive-description .ast-archive-title{font-size:40px;}.entry-title{font-size:30px;}h1,.entry-content h1{font-size:70px;}h2,.entry-content h2{font-size:40px;}h3,.entry-content h3{font-size:23px;}h4,.entry-content h4{font-size:18px;font-size:1.2rem;}h5,.entry-content h5{font-size:16px;font-size:1.0666666666667rem;}h6,.entry-content h6{font-size:14px;font-size:0.93333333333333rem;}.ast-single-post .entry-title,.page-title{font-size:30px;}#masthead .site-logo-img .custom-logo-link img{max-width:60px;}.astra-logo-svg{width:60px;}.ast-header-break-point .site-logo-img .custom-mobile-logo-link img{max-width:60px;}}@media (max-width:544px){.ast-archive-description .ast-archive-title{font-size:40px;}.entry-title{font-size:30px;}h1,.entry-content h1{font-size:33px;}h2,.entry-content h2{font-size:25px;}h3,.entry-content h3{font-size:20px;}h4,.entry-content h4{font-size:14px;font-size:0.93333333333333rem;}h5,.entry-content h5{font-size:13px;font-size:0.86666666666667rem;}h6,.entry-content h6{font-size:12px;font-size:0.8rem;}.ast-single-post .entry-title,.page-title{font-size:25px;}.ast-header-break-point .site-branding img,.ast-header-break-point #masthead .site-logo-img .custom-logo-link img{max-width:40px;}.astra-logo-svg{width:40px;}.ast-header-break-point .site-logo-img .custom-mobile-logo-link img{max-width:40px;}}@media (max-width:768px){html{font-size:85.5%;}}@media (max-width:544px){html{font-size:85.5%;}}@media (min-width:769px){.ast-container{max-width:1210px;}}@font-face {font-family: "Astra";src: url(https://astrolab.club/wp-content/themes/astra/assets/fonts/astra.woff) format("woff"),url(https://astrolab.club/wp-content/themes/astra/assets/fonts/astra.ttf) format("truetype"),url(https://astrolab.club/wp-content/themes/astra/assets/fonts/astra.svg#astra) format("svg");font-weight: normal;font-style: normal;font-display: fallback;}@media (max-width:921px) {.main-header-bar .main-header-bar-navigation{display:none;}}.ast-desktop .main-header-menu.submenu-with-border .sub-menu,.ast-desktop .main-header-menu.submenu-with-border .astra-full-megamenu-wrapper{border-color:#d94948;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu{border-top-width:2px;border-right-width:0px;border-left-width:0px;border-bottom-width:0px;border-style:solid;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu .sub-menu{top:-2px;}.ast-desktop .main-header-menu.submenu-with-border .sub-menu .menu-link,.ast-desktop .main-header-menu.submenu-with-border .children .menu-link{border-bottom-width:0px;border-style:solid;border-color:#eaeaea;}@media (min-width:769px){.main-header-menu .sub-menu .menu-item.ast-left-align-sub-menu:hover > .sub-menu,.main-header-menu .sub-menu .menu-item.ast-left-align-sub-menu.focus > .sub-menu{margin-left:-0px;}}.ast-small-footer{border-top-style:solid;border-top-width:0;border-top-color:#7a7a7a;}@media (max-width:920px){.ast-404-layout-1 .ast-404-text{font-size:100px;font-size:6.6666666666667rem;}}#masthead .ast-container,.ast-header-breadcrumb .ast-container{max-width:100%;padding-left:35px;padding-right:35px;}@media (max-width:921px){#masthead .ast-container,.ast-header-breadcrumb .ast-container{padding-left:20px;padding-right:20px;}}#masthead .ast-container,.ast-header-breadcrumb .ast-container{max-width:100%;padding-left:35px;padding-right:35px;}@media (max-width:921px){#masthead .ast-container,.ast-header-breadcrumb .ast-container{padding-left:20px;padding-right:20px;}}.ast-theme-transparent-header #masthead .site-logo-img .transparent-custom-logo .astra-logo-svg{width:180px;}.ast-theme-transparent-header #masthead .site-logo-img .transparent-custom-logo img{ max-width:180px;}@media (max-width:768px){.ast-theme-transparent-header #masthead .site-logo-img .transparent-custom-logo .astra-logo-svg{width:100px;}.ast-theme-transparent-header #masthead .site-logo-img .transparent-custom-logo img{ max-width:100px;}}@media (max-width:543px){.ast-theme-transparent-header #masthead .site-logo-img .transparent-custom-logo .astra-logo-svg{width:70px;}.ast-theme-transparent-header #masthead .site-logo-img .transparent-custom-logo img{ max-width:70px;}}@media (min-width:769px){.ast-theme-transparent-header #masthead{position:absolute;left:0;right:0;}.ast-theme-transparent-header .main-header-bar,.ast-theme-transparent-header.ast-header-break-point .main-header-bar{background:none;}body.elementor-editor-active.ast-theme-transparent-header #masthead,.fl-builder-edit .ast-theme-transparent-header #masthead,body.vc_editor.ast-theme-transparent-header #masthead,body.brz-ed.ast-theme-transparent-header #masthead{z-index:0;}.ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .custom-mobile-logo-link{display:none;}.ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .transparent-custom-logo{display:inline-block;}.ast-theme-transparent-header .ast-above-header,.ast-theme-transparent-header .ast-above-header.ast-above-header-bar{background-image:none;background-color:transparent;}.ast-theme-transparent-header .ast-below-header{background-image:none;background-color:transparent;}}.ast-theme-transparent-header .site-title a,.ast-theme-transparent-header .site-title a:focus,.ast-theme-transparent-header .site-title a:hover,.ast-theme-transparent-header .site-title a:visited{color:#ffffff;}.ast-theme-transparent-header .site-header .site-description{color:#ffffff;}.ast-theme-transparent-header .main-header-menu,.ast-theme-transparent-header .ast-builder-menu .main-header-menu .sub-menu,.ast-theme-transparent-header .ast-builder-menu .main-header-menu,.ast-theme-transparent-header.ast-header-break-point .main-header-bar-wrap .main-header-menu,.ast-flyout-menu-enable.ast-header-break-point.ast-theme-transparent-header .main-header-bar-navigation #site-navigation,.ast-fullscreen-menu-enable.ast-header-break-point.ast-theme-transparent-header .main-header-bar-navigation #site-navigation,.ast-flyout-above-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-above-header-navigation-wrap .ast-above-header-navigation,.ast-flyout-below-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-below-header-navigation-wrap .ast-below-header-actual-nav,.ast-fullscreen-above-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-above-header-navigation-wrap,.ast-fullscreen-below-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-below-header-navigation-wrap{background-color:rgba(255,255,255,0);}.ast-theme-transparent-header .main-header-menu,.ast-theme-transparent-header .main-header-menu .menu-link,.ast-theme-transparent-header [CLASS*="ast-builder-menu-"] .main-header-menu .menu-item > .menu-link,.ast-theme-transparent-header .ast-masthead-custom-menu-items,.ast-theme-transparent-header .ast-masthead-custom-menu-items a,.ast-theme-transparent-header .main-header-menu .menu-item > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .menu-item > .ast-menu-toggle,.ast-theme-transparent-header .ast-above-header-navigation a,.ast-header-break-point.ast-theme-transparent-header .ast-above-header-navigation a,.ast-header-break-point.ast-theme-transparent-header .ast-above-header-navigation > ul.ast-above-header-menu > .menu-item-has-children:not(.current-menu-item) > .ast-menu-toggle,.ast-theme-transparent-header .ast-below-header-menu,.ast-theme-transparent-header .ast-below-header-menu a,.ast-header-break-point.ast-theme-transparent-header .ast-below-header-menu a,.ast-header-break-point.ast-theme-transparent-header .ast-below-header-menu{color:rgba(255,255,255,0.75);}.ast-theme-transparent-header .main-header-menu .menu-item:hover > .menu-link,.ast-theme-transparent-header .main-header-menu .menu-item:hover > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .ast-masthead-custom-menu-items a:hover,.ast-theme-transparent-header .main-header-menu .focus > .menu-link,.ast-theme-transparent-header .main-header-menu .focus > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .current-menu-item > .menu-link,.ast-theme-transparent-header .main-header-menu .current-menu-ancestor > .menu-link,.ast-theme-transparent-header .main-header-menu .current-menu-item > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .current-menu-ancestor > .ast-menu-toggle,.ast-theme-transparent-header [CLASS*="ast-builder-menu-"] .main-header-menu .current-menu-item > .menu-link,.ast-theme-transparent-header [CLASS*="ast-builder-menu-"] .main-header-menu .current-menu-ancestor > .menu-link,.ast-theme-transparent-header [CLASS*="ast-builder-menu-"] .main-header-menu .current-menu-item > .ast-menu-toggle,.ast-theme-transparent-header [CLASS*="ast-builder-menu-"] .main-header-menu .current-menu-ancestor > .ast-menu-toggle{color:#ffffff;}@media (max-width:768px){.ast-theme-transparent-header #masthead{position:absolute;left:0;right:0;}.ast-theme-transparent-header .main-header-bar,.ast-theme-transparent-header.ast-header-break-point .main-header-bar{background:none;}body.elementor-editor-active.ast-theme-transparent-header #masthead,.fl-builder-edit .ast-theme-transparent-header #masthead,body.vc_editor.ast-theme-transparent-header #masthead,body.brz-ed.ast-theme-transparent-header #masthead{z-index:0;}.ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .custom-mobile-logo-link{display:none;}.ast-header-break-point.ast-replace-site-logo-transparent.ast-theme-transparent-header .transparent-custom-logo{display:inline-block;}.ast-theme-transparent-header .ast-above-header,.ast-theme-transparent-header .ast-above-header.ast-above-header-bar{background-image:none;background-color:transparent;}.ast-theme-transparent-header .ast-below-header{background-image:none;background-color:transparent;}}@media (max-width:768px){.ast-theme-transparent-header .site-title a,.ast-theme-transparent-header .site-title a:focus,.ast-theme-transparent-header .site-title a:hover,.ast-theme-transparent-header .site-title a:visited,.ast-theme-transparent-header .ast-builder-layout-element .ast-site-identity .site-title a,.ast-theme-transparent-header .ast-builder-layout-element .ast-site-identity .site-title a:hover,.ast-theme-transparent-header .ast-builder-layout-element .ast-site-identity .site-title a:focus,.ast-theme-transparent-header .ast-builder-layout-element .ast-site-identity .site-title a:visited{color:#ffffff;}.ast-theme-transparent-header .site-header .site-title a:hover{color:rgba(255,255,255,0.75);}.ast-theme-transparent-header .site-header .site-description{color:#ffffff;}.ast-theme-transparent-header.ast-header-break-point .main-header-menu,.ast-theme-transparent-header.ast-header-break-point .ast-builder-menu .main-header-menu .sub-menu,.ast-theme-transparent-header.ast-header-break-point .ast-builder-menu .main-header-menu,.ast-theme-transparent-header.ast-header-break-point .main-header-bar-wrap .main-header-menu,.ast-flyout-menu-enable.ast-header-break-point.ast-theme-transparent-header .main-header-bar-navigation #site-navigation,.ast-fullscreen-menu-enable.ast-header-break-point.ast-theme-transparent-header .main-header-bar-navigation #site-navigation,.ast-flyout-above-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-above-header-navigation-wrap .ast-above-header-navigation,.ast-flyout-below-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-below-header-navigation-wrap .ast-below-header-actual-nav,.ast-fullscreen-above-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-above-header-navigation-wrap,.ast-fullscreen-below-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-below-header-navigation-wrap{background-color:#f9f8f8;}.ast-theme-transparent-header .main-header-menu,.ast-theme-transparent-header .main-header-menu .menu-link,.ast-theme-transparent-header [CLASS*="ast-builder-menu-"] .main-header-menu .menu-item > .menu-link,.ast-theme-transparent-header .ast-masthead-custom-menu-items,.ast-theme-transparent-header .ast-masthead-custom-menu-items a,.ast-theme-transparent-header .main-header-menu .menu-item > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .menu-item > .ast-menu-toggle{color:rgba(1,22,39,0.75);}.ast-theme-transparent-header .main-header-menu .menu-item:hover > .menu-link,.ast-theme-transparent-header .main-header-menu .menu-item:hover > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .ast-masthead-custom-menu-items a:hover,.ast-theme-transparent-header .main-header-menu .focus > .menu-link,.ast-theme-transparent-header .main-header-menu .focus > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .current-menu-item > .menu-link,.ast-theme-transparent-header .main-header-menu .current-menu-ancestor > .menu-link,.ast-theme-transparent-header .main-header-menu .current-menu-item > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .current-menu-ancestor > .ast-menu-toggle,.ast-theme-transparent-header [CLASS*="ast-builder-menu-"] .main-header-menu .current-menu-item > .menu-link,.ast-theme-transparent-header [CLASS*="ast-builder-menu-"] .main-header-menu .current-menu-ancestor > .menu-link,.ast-theme-transparent-header [CLASS*="ast-builder-menu-"] .main-header-menu .current-menu-item > .ast-menu-toggle,.ast-theme-transparent-header [CLASS*="ast-builder-menu-"] .main-header-menu .current-menu-ancestor > .ast-menu-toggle{color:#011627;}}@media (max-width:544px){.ast-theme-transparent-header.ast-header-break-point .main-header-menu,.ast-theme-transparent-header.ast-header-break-point .ast-builder-menu .main-header-menu .sub-menu,.ast-theme-transparent-header.ast-header-break-point .ast-builder-menu .main-header-menu,.ast-theme-transparent-header.ast-header-break-point .main-header-bar-wrap .main-header-menu,.ast-flyout-menu-enable.ast-header-break-point.ast-theme-transparent-header .main-header-bar-navigation #site-navigation,.ast-fullscreen-menu-enable.ast-header-break-point.ast-theme-transparent-header .main-header-bar-navigation #site-navigation,.ast-flyout-above-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-above-header-navigation-wrap .ast-above-header-navigation,.ast-flyout-below-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-below-header-navigation-wrap .ast-below-header-actual-nav,.ast-fullscreen-above-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-above-header-navigation-wrap,.ast-fullscreen-below-menu-enable.ast-header-break-point.ast-theme-transparent-header .ast-below-header-navigation-wrap{background-color:#ffffff;}.ast-theme-transparent-header .main-header-menu,.ast-theme-transparent-header .ast-builder-menu .main-header-menu .menu-item > .menu-link,.ast-theme-transparent-header .main-header-menu .menu-link,.ast-theme-transparent-header .ast-masthead-custom-menu-items,.ast-theme-transparent-header .ast-masthead-custom-menu-items a,.ast-theme-transparent-header .main-header-menu .menu-item > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .menu-item > .ast-menu-toggle{color:#0a0a0a;}.ast-theme-transparent-header .main-header-menu .menu-item:hover > .menu-link,.ast-theme-transparent-header .main-header-menu .menu-item:hover > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .ast-masthead-custom-menu-items a:hover,.ast-theme-transparent-header .main-header-menu .focus > .menu-link,.ast-theme-transparent-header .main-header-menu .focus > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .current-menu-item > .menu-link,.ast-theme-transparent-header .main-header-menu .current-menu-ancestor > .menu-link,.ast-theme-transparent-header .main-header-menu .current-menu-item > .ast-menu-toggle,.ast-theme-transparent-header .main-header-menu .current-menu-ancestor > .ast-menu-toggle,.ast-theme-transparent-header [CLASS*="ast-builder-menu-"] .main-header-menu .current-menu-item > .menu-link,.ast-theme-transparent-header [CLASS*="ast-builder-menu-"] .main-header-menu .current-menu-ancestor > .menu-link,.ast-theme-transparent-header [CLASS*="ast-builder-menu-"] .main-header-menu .current-menu-item > .ast-menu-toggle,.ast-theme-transparent-header [CLASS*="ast-builder-menu-"] .main-header-menu .current-menu-ancestor > .ast-menu-toggle{color:#0a0a0a;}}.ast-theme-transparent-header .main-header-bar,.ast-theme-transparent-header.ast-header-break-point .main-header-bar{border-bottom-width:0;border-bottom-style:solid;}.ast-breadcrumbs .trail-browse,.ast-breadcrumbs .trail-items,.ast-breadcrumbs .trail-items li{display:inline-block;margin:0;padding:0;border:none;background:inherit;text-indent:0;}.ast-breadcrumbs .trail-browse{font-size:inherit;font-style:inherit;font-weight:inherit;color:inherit;}.ast-breadcrumbs .trail-items{list-style:none;}.trail-items li::after{padding:0 0.3em;content:"\00bb";}.trail-items li:last-of-type::after{display:none;}.elementor-widget-heading .elementor-heading-title{margin:0;}.elementor-post.elementor-grid-item.hentry{margin-bottom:0;}.woocommerce div.product .elementor-element.elementor-products-grid .related.products ul.products li.product,.elementor-element .elementor-wc-products .woocommerce[class*='columns-'] ul.products li.product{width:auto;margin:0;float:none;}.ast-left-sidebar .elementor-section.elementor-section-stretched,.ast-right-sidebar .elementor-section.elementor-section-stretched{max-width:100%;left:0 !important;}.ast-header-break-point .main-header-bar{border-bottom-width:0;}@media (min-width:769px){.main-header-bar{border-bottom-width:0;}}.ast-safari-browser-less-than-11 .main-header-menu .menu-item,.ast-safari-browser-less-than-11 .main-header-bar .ast-masthead-custom-menu-items{display:block;}.main-header-menu .menu-item,.main-header-bar .ast-masthead-custom-menu-items{-js-display:flex;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-moz-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-webkit-flex-direction:column;-moz-box-orient:vertical;-moz-box-direction:normal;-ms-flex-direction:column;flex-direction:column;}.main-header-menu > .menu-item > .menu-link{height:100%;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;-js-display:flex;display:flex;}.ast-primary-menu-disabled .main-header-bar .ast-masthead-custom-menu-items{flex:unset;}.header-main-layout-1 .ast-flex.main-header-container,.header-main-layout-3 .ast-flex.main-header-container{-webkit-align-content:center;-ms-flex-line-pack:center;align-content:center;-webkit-box-align:center;-webkit-align-items:center;-moz-box-align:center;-ms-flex-align:center;align-items:center;}.ast-desktop .astra-menu-animation-slide-up>.menu-item>.astra-full-megamenu-wrapper,.ast-desktop .astra-menu-animation-slide-up>.menu-item>.sub-menu,.ast-desktop .astra-menu-animation-slide-up>.menu-item>.sub-menu .sub-menu{opacity:0;visibility:hidden;transform:translateY(.5em);transition:visibility .2s ease,transform .2s ease}.ast-desktop .astra-menu-animation-slide-up>.menu-item .menu-item.focus>.sub-menu,.ast-desktop .astra-menu-animation-slide-up>.menu-item .menu-item:hover>.sub-menu,.ast-desktop .astra-menu-animation-slide-up>.menu-item.focus>.astra-full-megamenu-wrapper,.ast-desktop .astra-menu-animation-slide-up>.menu-item.focus>.sub-menu,.ast-desktop .astra-menu-animation-slide-up>.menu-item:hover>.astra-full-megamenu-wrapper,.ast-desktop .astra-menu-animation-slide-up>.menu-item:hover>.sub-menu{opacity:1;visibility:visible;transform:translateY(0);transition:opacity .2s ease,visibility .2s ease,transform .2s ease}.ast-desktop .astra-menu-animation-slide-up>.full-width-mega.menu-item.focus>.astra-full-megamenu-wrapper,.ast-desktop .astra-menu-animation-slide-up>.full-width-mega.menu-item:hover>.astra-full-megamenu-wrapper{-js-display:flex;display:flex}.ast-desktop .astra-menu-animation-slide-down>.menu-item>.astra-full-megamenu-wrapper,.ast-desktop .astra-menu-animation-slide-down>.menu-item>.sub-menu,.ast-desktop .astra-menu-animation-slide-down>.menu-item>.sub-menu .sub-menu{opacity:0;visibility:hidden;transform:translateY(-.5em);transition:visibility .2s ease,transform .2s ease}.ast-desktop .astra-menu-animation-slide-down>.menu-item .menu-item.focus>.sub-menu,.ast-desktop .astra-menu-animation-slide-down>.menu-item .menu-item:hover>.sub-menu,.ast-desktop .astra-menu-animation-slide-down>.menu-item.focus>.astra-full-megamenu-wrapper,.ast-desktop .astra-menu-animation-slide-down>.menu-item.focus>.sub-menu,.ast-desktop .astra-menu-animation-slide-down>.menu-item:hover>.astra-full-megamenu-wrapper,.ast-desktop .astra-menu-animation-slide-down>.menu-item:hover>.sub-menu{opacity:1;visibility:visible;transform:translateY(0);transition:opacity .2s ease,visibility .2s ease,transform .2s ease}.ast-desktop .astra-menu-animation-slide-down>.full-width-mega.menu-item.focus>.astra-full-megamenu-wrapper,.ast-desktop .astra-menu-animation-slide-down>.full-width-mega.menu-item:hover>.astra-full-megamenu-wrapper{-js-display:flex;display:flex}.ast-desktop .astra-menu-animation-fade>.menu-item>.astra-full-megamenu-wrapper,.ast-desktop .astra-menu-animation-fade>.menu-item>.sub-menu,.ast-desktop .astra-menu-animation-fade>.menu-item>.sub-menu .sub-menu{opacity:0;visibility:hidden;transition:opacity ease-in-out .3s}.ast-desktop .astra-menu-animation-fade>.menu-item .menu-item.focus>.sub-menu,.ast-desktop .astra-menu-animation-fade>.menu-item .menu-item:hover>.sub-menu,.ast-desktop .astra-menu-animation-fade>.menu-item.focus>.astra-full-megamenu-wrapper,.ast-desktop .astra-menu-animation-fade>.menu-item.focus>.sub-menu,.ast-desktop .astra-menu-animation-fade>.menu-item:hover>.astra-full-megamenu-wrapper,.ast-desktop .astra-menu-animation-fade>.menu-item:hover>.sub-menu{opacity:1;visibility:visible;transition:opacity ease-in-out .3s}.ast-desktop .astra-menu-animation-fade>.full-width-mega.menu-item.focus>.astra-full-megamenu-wrapper,.ast-desktop .astra-menu-animation-fade>.full-width-mega.menu-item:hover>.astra-full-megamenu-wrapper{-js-display:flex;display:flex}
+    </style>
+    <link rel="stylesheet" id="astra-google-fonts-css" href="//fonts.googleapis.com/css?family=Montserrat%3A400%2C%2C700&amp;display=fallback&amp;ver=3.0.1" media="all">
+    <link rel="stylesheet" id="wp-block-library-css" href="https://astrolab.club/wp-includes/css/dist/block-library/style.min.css?ver=5.6.6" media="all">
+    <link rel="stylesheet" id="exactmetrics-popular-posts-style-css" href="https://astrolab.club/wp-content/plugins/google-analytics-dashboard-for-wp/assets/css/frontend.min.css?ver=6.5.0" media="all">
+    <link rel="stylesheet" id="hfe-style-css" href="https://astrolab.club/wp-content/plugins/header-footer-elementor/assets/css/header-footer-elementor.css?ver=1.5.6" media="all">
+    <link rel="stylesheet" id="elementor-icons-css" href="https://astrolab.club/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.9.1" media="all">
+    <link rel="stylesheet" id="elementor-animations-css" href="https://astrolab.club/wp-content/plugins/elementor/assets/lib/animations/animations.min.css?ver=3.0.16" media="all">
+    <link rel="stylesheet" id="elementor-frontend-legacy-css" href="https://astrolab.club/wp-content/plugins/elementor/assets/css/frontend-legacy.min.css?ver=3.0.16" media="all">
+    <link rel="stylesheet" id="elementor-frontend-css" href="https://astrolab.club/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.0.16" media="all">
+    <link rel="stylesheet" id="elementor-post-817-css" href="https://astrolab.club/wp-content/uploads/elementor/css/post-817.css?ver=1611196524" media="all">
+    <link rel="stylesheet" id="elementor-pro-css" href="https://astrolab.club/wp-content/plugins/elementor-pro/assets/css/frontend.min.css?ver=3.0.10" media="all">
+    <link rel="stylesheet" id="elementor-post-361-css" href="https://astrolab.club/wp-content/uploads/elementor/css/post-361.css?ver=1611200598" media="all">
+    <link rel="stylesheet" id="hfe-widgets-style-css" href="https://astrolab.club/wp-content/plugins/header-footer-elementor/inc/widgets-css/frontend.css?ver=1.5.6" media="all">
+    <link rel="stylesheet" id="elementor-post-108-css" href="https://astrolab.club/wp-content/uploads/elementor/css/post-108.css?ver=1611196524" media="all">
+    <link rel="stylesheet" id="astra-addon-css-css" href="https://astrolab.club/wp-content/uploads/astra-addon/astra-addon-6008e40baa1f80-95722594.css?ver=3.0.0" media="all">
+    <link rel="stylesheet" id="astra-child-theme-css-css" href="https://astrolab.club/wp-content/themes/astra-child/style.css?ver=1.0.0" media="all">
+    <link rel="stylesheet" id="google-fonts-1-css" href="https://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic%7CRoboto+Slab%3A100%2C100italic%2C200%2C200italic%2C300%2C300italic%2C400%2C400italic%2C500%2C500italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic%2C900%2C900italic&amp;ver=5.6.6" media="all">
+    <link rel="stylesheet" id="elementor-icons-shared-0-css" href="https://astrolab.club/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.12.0" media="all">
+    <link rel="stylesheet" id="elementor-icons-fa-solid-css" href="https://astrolab.club/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.12.0" media="all">
+    <link rel="stylesheet" id="elementor-icons-fa-brands-css" href="https://astrolab.club/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.12.0" media="all">
+    <!--[if IE]>
+    <script src='https://astrolab.club/wp-content/themes/astra/assets/js/minified/flexibility.min.js?ver=3.0.1' id='astra-flexibility-js'></script>
+    <script id='astra-flexibility-js-after'>
+    flexibility(document.documentElement);
+    </script>
+    <![endif]-->
+    <script id="exactmetrics-frontend-script-js-extra">
+    var exactmetrics_frontend = {"js_events_tracking":"true","download_extensions":"zip,mp3,mpeg,pdf,docx,pptx,xlsx,rar","inbound_paths":"[{\"path\":\"\\\/leonardo\\\/\",\"label\":\"ldv\"},{\"path\":\"\\\/inscricao-leonardo\\\/\",\"label\":\"ldv\"}]","home_url":"https:\/\/astrolab.club","hash_tracking":"false"};
+    </script>
+    <script src="https://astrolab.club/wp-content/plugins/google-analytics-dashboard-for-wp/assets/js/frontend.min.js?ver=6.5.0" id="exactmetrics-frontend-script-js"></script>
+    <link rel="https://api.w.org/" href="https://astrolab.club/wp-json/"><link rel="alternate" type="application/json" href="https://astrolab.club/wp-json/wp/v2/pages/361"><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://astrolab.club/xmlrpc.php?rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://astrolab.club/wp-includes/wlwmanifest.xml"> 
+    <meta name="generator" content="WordPress 5.6.6">
+    <link rel="canonical" href="https://astrolab.club/projetos/">
+    <link rel="shortlink" href="https://astrolab.club/?p=361">
+    <link rel="alternate" type="application/json+oembed" href="https://astrolab.club/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fastrolab.club%2Fprojetos%2F">
+    <link rel="alternate" type="text/xml+oembed" href="https://astrolab.club/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fastrolab.club%2Fprojetos%2F&amp;format=xml">
+    <style>.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style><link rel="icon" href="https://astrolab.club/wp-content/uploads/2019/12/cropped-astrolab_logo_telescópio_fundo_azul_novo-32x32.jpg" sizes="32x32">
+
+    
+
+    </head>
+  
+   
+            
+                    <div data-elementor-type="wp-post" data-elementor-id="361" class="elementor elementor-361" data-elementor-settings="[]">
+                            <div class="elementor-inner">
+                                <div class="elementor-section-wrap">
+                                <section class="elementor-section elementor-top-section elementor-element elementor-element-8e491de elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8e491de" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                <div class="elementor-background-overlay"></div>
+                                <div class="elementor-container elementor-column-gap-no">
+                                <div class="elementor-row">
+                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-fb027eb" data-id="fb027eb" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-02d282c elementor-widget elementor-widget-heading" data-id="02d282c" data-element_type="widget" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                <h1 class="elementor-heading-title elementor-size-default">SISTEMAS SOLAR</h1>		</div>
+                    </div>
+                            </div>
+                        </div>
+            </div>
+                                    </div>
+                        </div>
+            </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-bd9ffcb elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="bd9ffcb" data-element_type="section">
+                            <div class="elementor-container elementor-column-gap-default">
+                                <div class="elementor-row">
+                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-c5ceffd" data-id="c5ceffd" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-b500b59 elementor-widget elementor-widget-heading" data-id="b500b59" data-element_type="widget" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                <h2 class="elementor-heading-title elementor-size-default">PLANETAS</h2>		</div>
+                    </div>
+                    <div class="elementor-element elementor-element-edbf631 elementor-widget elementor-widget-text-editor" data-id="edbf631" data-element_type="widget" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-text-editor elementor-clearfix"><p>Um planeta é um corpo celeste que orbita uma estrela ou um remanescente de estrela, com massa suficiente para se tornar esférico pela sua própria gravidade, mas não ao ponto de causar fusão termonuclear, e que tenha limpado de planetesimais a sua região vizinha.</p>
+    <p></p></div>
+                    </div>
+                    </div>
+                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-3b1167b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3b1167b" data-element_type="section">
+                            <div class="elementor-container elementor-column-gap-default">
+                                <div class="elementor-row">
+                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-b75c82b" data-id="b75c82b" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-214bd0f elementor-widget-divider--separator-type-pattern elementor-widget-divider--no-spacing elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="214bd0f" data-element_type="widget" data-widget_type="divider.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-divider" style="--divider-pattern-url: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid meet' overflow='visible' height='100%' viewBox='0 0 120 26' fill='black' stroke='none'%3E%3Cpath d='M54,1.6V26h-9V2.5L54,1.6z M69,1.6v23.3L60,26V1.6H69z M24,1.6v23.5l-9-0.6V1.6H24z M30,0l9,0.7v24.5h-9V0z M9,2.5v22H0V3.7L9,2.5z M75,1.6l9,0.9v22h-9V1.6z M99,2.7v21.7h-9V3.8L99,2.7z M114,3.8v20.7l-9-0.5V3.8L114,3.8z'/%3E%3C/svg%3E&quot;);">
+                <span class="elementor-divider-separator">
+                            </span>
+            </div>
+                    </div>
+                    </div>
+                            </div>
+                        </div>
+            </div>
+                                    </div>
+                        </div>
+            </section>
+                    
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-32fd27a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="32fd27a" data-element_type="section">
+                            <div class="elementor-container elementor-column-gap-default">
+                                <div class="elementor-row">
+                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-ba942e2" data-id="ba942e2" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-5697d7b elementor-view-default elementor-widget elementor-widget-icon" data-id="5697d7b" data-element_type="widget" data-widget_type="icon.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-icon-wrapper">
+                <div class="elementor-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" id="Capa_1" height="512" viewBox="0 0 512 512" width="512"><g><g><path d="m89.182 291.66v24.966c0 10.827 6.865 20.464 17.098 24.001l3.28 1.134c6.441 2.226 13.156-2.557 13.156-9.372v-43.772z" fill="#5e54ac"></path></g><g><path d="m107.812 289.969v42.42c0 3.06-1.36 5.703-3.435 7.493.62.272 1.255.521 1.903.745l3.28 1.134c6.441 2.226 13.156-2.557 13.156-9.372v-43.772z" fill="#524798"></path></g><g><path d="m178.054 126.059v70.657h-4.818c-9.066 0-16.955 6.2-19.099 15.008l-18.277 75.094c-1.638 6.73-7.666 11.466-14.592 11.466h-32.084v-58.798c0-15.075 3.369-29.959 9.861-43.564l16.244-34.041c4.862-10.19 12.377-18.883 21.756-25.169 10.362-6.945 22.554-10.652 35.028-10.652h5.981z" fill="#dddaec"></path></g><g><path d="m155.779 179.259c-9.066 0-16.955 6.2-19.099 15.008l-18.277 75.094c-1.638 6.73-7.666 11.466-14.592 11.466h-14.627v17.456h32.085c6.926 0 12.954-4.737 14.592-11.466l18.277-75.094c2.144-8.808 10.034-15.008 19.099-15.008h4.818v-17.456z" fill="#d0cee7"></path></g><g><path d="m302.716 126.059v70.657h4.818c9.066 0 16.955 6.2 19.099 15.008l18.277 75.094c1.638 6.73 7.666 11.466 14.592 11.466h17.48c8.066 0 14.604-6.539 14.604-14.604v-44.194c0-15.075-3.369-29.959-9.861-43.564l-16.244-34.041c-4.862-10.19-12.377-18.883-21.756-25.169-10.362-6.945-22.554-10.652-35.028-10.652h-5.981z" fill="#dddaec"></path></g><g><path d="m381.725 195.922-16.244-34.041c-4.862-10.19-12.377-18.883-21.756-25.169-10.362-6.945-22.554-10.652-35.028-10.652h-5.981v2.205c6.562 1.782 12.83 4.62 18.54 8.447 9.379 6.286 16.894 14.979 21.756 25.169l16.244 34.041c6.492 13.605 9.861 28.489 9.861 43.564v44.194c0 7.235-5.267 13.226-12.173 14.386.834.144 1.689.219 2.558.219h17.48c8.066 0 14.604-6.539 14.604-14.604v-44.194c.001-15.076-3.369-29.96-9.861-43.565z" fill="#d0cee7"></path></g><g><path d="m175.764 99.624c-28.86 1.837-26.408-6.29-26.193-30.913.394-14.659 15.843-12.866 26.193-12.696z" fill="#dddaec"></path></g><g><path d="m160.635 56.432v22.915c0 5.711-4.773 10.314-10.475 10.003l-.089-.005c1.654 8.575 7.337 11.447 25.693 10.278v-43.607c-4.625-.076-10.266-.472-15.129.416z" fill="#d0cee7"></path></g><g><path d="m305.006 99.624c28.86 1.837 26.408-6.29 26.193-30.913-.394-14.659-15.843-12.866-26.193-12.696z" fill="#dddaec"></path></g><g><path d="m331.2 68.712c-.207-7.683-4.551-10.843-10.127-12.09.1.678.17 1.388.191 2.154.186 21.34 2.037 30.284-16.257 31.095v9.754c28.859 1.836 26.407-6.291 26.193-30.913z" fill="#d0cee7"></path></g><g><path d="m451.128 504.64c2.71 0 3.989-3.361 1.957-5.155-56.677-50.063-131.134-80.458-212.7-80.458s-156.024 30.395-212.7 80.458c-2.031 1.794-.753 5.155 1.957 5.155z" fill="#b1e4f9"></path></g><g><path d="m453.086 499.485c-56.677-50.063-131.134-80.458-212.7-80.458-16.915 0-33.518 1.326-49.726 3.845 61.951 9.627 118.051 36.932 162.975 76.613 2.031 1.794.752 5.155-1.958 5.155h99.452c2.709 0 3.988-3.361 1.957-5.155z" fill="#90d8f9"></path></g><g><path d="m322.172 152.003c0-14.329-11.616-25.944-25.944-25.944h-112.063c-14.329 0-25.944 11.616-25.944 25.944v314.367h64.039l10.226-141.804c.299-4.142 3.746-7.35 7.899-7.35 4.153 0 7.6 3.208 7.899 7.35l10.226 141.804h64.039z" fill="#f9f6f9"></path></g><g><g><path d="m322.172 152.003c0-14.329-11.616-25.944-25.944-25.944h-18.643c10.894 3.077 18.881 13.084 18.881 24.963l.378 314.366h-38.404l.071.981h64.039z" fill="#dddaec"></path></g></g><g><path d="m299.402 146.038-21.124 8.282c-24.359 9.551-51.427 9.551-75.786 0l-21.124-8.282c-5.205-2.041-8.63-7.062-8.63-12.653v-58.378c0-37.36 30.287-67.647 67.647-67.647 37.36 0 67.647 30.287 67.647 67.647v58.378c0 5.591-3.424 10.612-8.63 12.653z" fill="#dddaec"></path></g><g><path d="m240.385 7.36c-3.123 0-6.19.23-9.2.639 33.006 4.491 58.447 32.77 58.447 67.008v58.378c0 5.591-3.424 10.612-8.63 12.653l-21.124 8.282c-9.272 3.635-18.936 5.883-28.693 6.75 15.879 1.412 32.005-.835 47.093-6.75l21.124-8.282c5.205-2.041 8.63-7.062 8.63-12.653v-58.378c0-37.36-30.286-67.647-67.647-67.647z" fill="#d0cee7"></path></g><g><path d="m211.26 480.415h-42.04c-6.075 0-11-4.925-11-11v-8.759c0-15.611 12.655-28.266 28.266-28.266h7.508c15.611 0 28.266 12.655 28.266 28.266v8.759c0 6.075-4.925 11-11 11z" fill="#5e54ac"></path></g><g><path d="m311.55 480.415h-42.039c-6.075 0-11-4.925-11-11v-8.759c0-15.611 12.655-28.266 28.266-28.266h7.508c15.611 0 28.266 12.655 28.266 28.266v8.759c-.001 6.075-4.926 11-11.001 11z" fill="#5e54ac"></path></g><g><path d="m194.521 432.391h-8.563c-2.421 0-4.769.312-7.007.895 11.926 3.105 20.731 13.945 20.731 26.844v9.491c0 5.962-4.833 10.795-10.795 10.795h22.578c5.962 0 10.795-4.833 10.795-10.795v-9.491c0-15.321-12.419-27.739-27.739-27.739z" fill="#524798"></path></g><g><path d="m294.812 432.391h-8.563c-2.421 0-4.769.312-7.007.895 11.926 3.105 20.731 13.945 20.731 26.844v9.491c0 5.962-4.833 10.795-10.795 10.795h22.578c5.962 0 10.795-4.833 10.795-10.795v-9.491c-.001-15.321-12.42-27.739-27.739-27.739z" fill="#524798"></path></g><g><path d="m252.433 133.051h-24.096c-16.348 0-29.602-13.253-29.602-29.602v-24.095c0-16.348 13.253-29.602 29.602-29.602h24.096c16.348 0 29.602 13.253 29.602 29.602v24.096c-.001 16.348-13.254 29.601-29.602 29.601z" fill="#5e54ac"></path></g><g><path d="m258.936 50.365c.4 1.921.612 3.911.612 5.95v25.2c0 16.043-13.006 29.049-29.049 29.049h-25.2c-2.04 0-4.029-.212-5.95-.612 2.746 13.189 14.433 23.099 28.437 23.099h25.2c16.043 0 29.049-13.006 29.049-29.049v-25.2c-.001-14.004-9.91-25.691-23.099-28.437z" fill="#524798"></path></g><g><path d="m195.884 395.437h-33.456c-6.591 0-11.935-5.343-11.935-11.935v-30.779c0-6.591 5.343-11.935 11.935-11.935h33.456c6.591 0 11.935 5.343 11.935 11.935v30.779c0 6.592-5.344 11.935-11.935 11.935z" fill="#dddaec"></path></g><g><path d="m318.342 395.437h-33.456c-6.591 0-11.935-5.343-11.935-11.935v-30.779c0-6.591 5.343-11.935 11.935-11.935h33.456c6.591 0 11.935 5.343 11.935 11.935v30.779c0 6.592-5.343 11.935-11.935 11.935z" fill="#dddaec"></path></g><g><path d="m196.107 340.789h-4.296v26.928c0 6.468-5.244 11.712-11.712 11.712h-29.606v4.296c0 6.468 5.244 11.712 11.712 11.712h33.901c6.468 0 11.712-5.244 11.712-11.712v-31.224c.001-6.469-5.243-11.712-11.711-11.712z" fill="#d0cee7"></path></g><g><path d="m318.565 340.789h-4.296v26.928c0 6.468-5.244 11.712-11.712 11.712h-29.606v4.296c0 6.468 5.244 11.712 11.712 11.712h33.901c6.468 0 11.712-5.244 11.712-11.712v-31.224c.001-6.469-5.242-11.712-11.711-11.712z" fill="#d0cee7"></path></g><g><circle cx="271.849" cy="240.608" fill="#5e54ac" r="14.904"></circle></g><g><circle cx="271.849" cy="283.38" fill="#95d6a4" r="14.904"></circle></g><g><path d="m276.078 226.322c.397 1.342.618 2.759.618 4.229 0 8.231-6.673 14.904-14.904 14.904-1.47 0-2.887-.221-4.229-.618 1.824 6.17 7.525 10.675 14.286 10.675 8.231 0 14.904-6.673 14.904-14.904 0-6.761-4.505-12.462-10.675-14.286z" fill="#524798"></path></g><g><path d="m276.078 269.094c.397 1.342.618 2.759.618 4.229 0 8.231-6.673 14.904-14.904 14.904-1.47 0-2.887-.221-4.229-.618 1.824 6.17 7.525 10.675 14.286 10.675 8.231 0 14.904-6.673 14.904-14.904 0-6.761-4.505-12.462-10.675-14.286z" fill="#78c2a4"></path></g><g><circle cx="208.921" cy="283.38" fill="#5e54ac" r="14.904"></circle></g><g><path d="m213.15 269.094c.397 1.342.618 2.759.618 4.229 0 8.231-6.673 14.904-14.904 14.904-1.47 0-2.887-.221-4.229-.618 1.824 6.17 7.525 10.675 14.286 10.675 8.231 0 14.904-6.673 14.904-14.904 0-6.761-4.505-12.462-10.675-14.286z" fill="#524798"></path></g><g><circle cx="208.921" cy="240.608" fill="#e28086" r="14.904"></circle></g><g><path d="m213.15 226.322c.397 1.342.618 2.759.618 4.229 0 8.231-6.673 14.904-14.904 14.904-1.47 0-2.887-.221-4.229-.618 1.824 6.17 7.525 10.675 14.286 10.675 8.231 0 14.904-6.673 14.904-14.904 0-6.761-4.505-12.462-10.675-14.286z" fill="#dd636e"></path></g><g><path d="m482.937 71.05-124.424-46.955v100.454l124.423-46.955c3.018-1.138 3.018-5.406.001-6.544z" fill="#e28086"></path></g><g><path d="m483.099 71.111-31.245-11.791-93.34 35.225v30.005l124.585-47.016c2.96-1.118 2.96-5.306 0-6.423z" fill="#dd636e"></path></g><g><path d="m255.661 219.695h-30.551c-8.988 0-16.274-7.286-16.274-16.274 0-8.988 7.286-16.274 16.274-16.274h30.551c8.988 0 16.274 7.286 16.274 16.274-.001 8.988-7.287 16.274-16.274 16.274z" fill="#dddaec"></path></g><g><path d="m258.06 187.344c.116.785.196 1.582.196 2.399 0 8.988-7.286 16.274-16.274 16.274h-30.551c-.817 0-1.614-.08-2.399-.196 1.163 7.847 7.907 13.874 16.077 13.874h30.551c8.988 0 16.274-7.286 16.274-16.274 0-8.17-6.027-14.914-13.874-16.077z" fill="#d0cee7"></path></g><g><path d="m386.108 295.112-8.837 8.639c-7.742 7.569-19.432 9.396-29.115 4.551l-3.104-1.553c-6.094-3.049-7.368-11.195-2.495-15.959l22.081-21.586c4.951-4.84 12.99-4.385 17.363.984l5.16 6.335c4.509 5.537 4.052 13.598-1.053 18.589z" fill="#5e54ac"></path></g><g><path d="m387.161 276.524-3.902-4.79c-.652 2.168-1.832 4.204-3.554 5.888l-8.837 8.639c-7.596 7.425-18.986 9.308-28.558 4.803-4.563 4.796-3.241 12.693 2.742 15.686l3.104 1.553c9.683 4.845 21.373 3.017 29.115-4.552l8.837-8.639c5.105-4.991 5.562-13.052 1.053-18.588z" fill="#524798"></path></g><g><path d="m227.785 140.411h25.201c20.076 0 36.409-16.333 36.409-36.409v-25.201c0-20.076-16.333-36.409-36.409-36.409h-25.201c-20.076 0-36.409 16.333-36.409 36.409v25.201c0 20.076 16.333 36.409 36.409 36.409zm-21.689-61.61c0-11.959 9.73-21.689 21.689-21.689h25.201c11.96 0 21.689 9.73 21.689 21.689v25.201c0 11.959-9.73 21.689-21.689 21.689h-25.201c-11.96 0-21.689-9.73-21.689-21.689z"></path><path d="m485.697 64.225-68.743-25.942c-3.802-1.435-8.05.485-9.485 4.287-1.435 3.804.484 8.05 4.288 9.485l59.006 22.268-104.889 39.582v-79.165l14.133 5.333c3.805 1.437 8.05-.484 9.485-4.287 1.435-3.804-.484-8.05-4.288-9.485l-24.092-9.092c-2.259-.853-5.37-.131-7.358 1.242-1.681 1.163-4.256 3.079-4.256 9.299v104.01c-.553-.394-1.109-.785-1.675-1.164-9.749-6.533-20.849-10.47-32.431-11.57v-11.871c8.262-.378 13.503-2.235 17.312-5.971 6.271-6.151 6.126-15.05 5.925-27.365.292-6.861-.665-14.96-5.807-19.3-6.007-5.683-14.668-6.133-22.277-6.002-10.727-28.322-38.124-48.517-70.16-48.517s-59.432 20.195-70.161 48.518c-7.607-.132-16.271.319-22.278 6.002-5.141 4.34-5.806 8.745-5.806 19.3 0 12.317-.345 21.215 5.925 27.365 3.809 3.736 9.049 5.593 17.312 5.971v11.871c-11.582 1.1-22.682 5.036-32.431 11.57-10.47 7.017-18.873 16.739-24.301 28.115l-16.244 34.041c-6.921 14.503-10.579 30.663-10.579 46.733l-.001 77.14c0 13.956 8.863 26.397 22.052 30.956 6.11 2.695 13.367 3.041 18.95-1.122 4.542-3.235 7.253-8.496 7.253-14.071v-14.217c1.452 1.682 3.502 2.552 5.57 2.552 1.671 0 3.353-.566 4.732-1.726 3.112-2.616 3.513-7.259.897-10.37l-6.388-7.598c3.942-3.022 6.876-7.35 8.122-12.471l7.849-32.262v80.909c-4.678 3.479-7.728 9.031-7.728 15.295v31.225c0 6.264 3.05 11.816 7.728 15.295v25.017c-20.238 5.719-39.984 13.397-58.762 22.904-3.626 1.836-5.078 6.265-3.241 9.891 1.297 2.561 3.886 4.037 6.572 4.037 1.118 0 2.254-.256 3.319-.795 16.693-8.453 34.185-15.398 52.112-20.724v30.27c0 10.011 8.144 18.155 18.155 18.155h42.45c10.01 0 18.155-8.144 18.155-18.155l2.895-43.125c5.246-.129 10.507-.135 15.741-.006l2.895 43.131c0 10.011 8.144 18.155 18.155 18.155h42.45c10.01 0 18.155-8.144 18.155-18.155l-.033-30.287c6.609 1.966 13.149 4.177 19.621 6.583v25.457c0 4.065 3.295 7.36 7.36 7.36s7.36-3.295 7.36-7.36v-19.554c26.866 11.571 52.192 26.896 74.908 45.46h-397.484c8.983-7.349 18.394-14.221 28.088-20.509 3.41-2.212 4.382-6.77 2.169-10.18-2.212-3.411-6.771-4.382-10.18-2.17-13.625 8.838-26.715 18.779-38.906 29.548-3.239 2.861-4.343 7.323-2.812 11.367 1.531 4.048 5.316 6.664 9.642 6.664h421.486c4.325 0 8.11-2.616 9.642-6.664 1.53-4.044.426-8.506-2.812-11.367-27.72-24.485-59.608-44.201-93.74-58.131v-117.835c6.711-.974 13.117-4.023 18.197-8.989l8.837-8.638c4.693-4.329 7.825-10.172 7.694-16.695v-44.194c0-16.07-3.658-32.23-10.579-46.733l-16.244-34.041c-2.175-4.558-4.835-8.844-7.906-12.804v-15.646l121.48-45.843c4.241-1.6 6.982-5.564 6.982-10.097 0-4.534-2.74-8.497-6.982-10.098zm-136.199 87.09v122.398l-.164.16-15.549-63.888c-.814-3.343-2.227-6.429-4.194-9.203l-.059-48.777c0-5.689-1.479-11.179-4.136-16.016 5.009 1.579 9.798 3.867 14.232 6.838 3.633 2.433 6.928 5.3 9.87 8.488zm-85.984 282.106-7.888-109.385c-.573-7.951-7.267-14.181-15.24-14.181s-14.667 6.229-15.24 14.181l-7.889 109.385c-6.13-5.226-14.068-8.391-22.735-8.391h-8.563c-7.595 0-14.628 2.433-20.378 6.549v-28.782h30.526c10.516 0 19.072-8.556 19.072-19.072v-31.225c0-10.516-8.556-19.072-19.072-19.072h-30.527v-31.462l9.748-7.243c3.335-2.477 7.459-3.842 11.614-3.842h1.018c3.086 8.597 11.315 14.763 20.961 14.763 12.276 0 22.264-9.988 22.264-22.264 0-10.134-6.808-18.702-16.089-21.386 9.281-2.684 16.089-11.252 16.089-21.386 0-5.097-1.726-9.796-4.618-13.553h27.636c-2.892 3.757-4.618 8.456-4.618 13.553 0 10.134 6.808 18.702 16.089 21.386-9.281 2.684-16.089 11.252-16.089 21.386 0 12.276 9.988 22.264 22.264 22.264 9.645 0 17.875-6.167 20.961-14.763h1.018c4.154 0 8.279 1.365 11.613 3.842l9.552 7.099.038 31.607h-30.369c-10.516 0-19.072 8.556-19.072 19.072v31.225c0 10.516 8.556 19.072 19.072 19.072h30.45l.035 28.753c-5.742-4.098-12.76-6.519-20.336-6.519h-8.563c-8.667-.001-16.605 3.163-22.734 8.389zm-60.911-222.796c.925 2.884 2.387 5.531 4.273 7.816-9.255.847-16.885 7.381-19.363 16.068h-.571c-6.02 0-12.001 1.635-17.199 4.65l16.121-19.454c4.24-5.116 10.224-8.331 16.739-9.08zm92.303 9.081 16.121 19.454c-5.198-3.015-11.179-4.65-17.199-4.65h-.571c-2.479-8.688-10.109-15.221-19.363-16.068 1.886-2.285 3.348-4.932 4.273-7.816 6.515.748 12.499 3.963 16.739 9.08zm28.011 164.019c0 2.4-1.953 4.352-4.352 4.352h-33.901c-2.4 0-4.352-1.952-4.352-4.352v-31.225c0-2.4 1.953-4.352 4.352-4.352h33.901c2.4 0 4.352 1.952 4.352 4.352zm-29.089-107.564h-.923c-2.345-6.821-7.914-12.152-14.881-14.167 6.483-1.875 11.759-6.618 14.351-12.764h1.453c4.154 0 8.279 1.365 11.614 3.842l9.501 7.06.028 23.334-.75-.558c-5.855-4.351-13.097-6.747-20.393-6.747zm-21.979-43.097c4.16 0 7.544 3.384 7.544 7.544s-3.384 7.544-7.544 7.544-7.544-3.384-7.544-7.544 3.385-7.544 7.544-7.544zm0 42.772c4.16 0 7.544 3.384 7.544 7.544s-3.384 7.544-7.544 7.544-7.544-3.384-7.544-7.544 3.385-7.544 7.544-7.544zm-16.188-63.501h-30.551c-4.915 0-8.914-3.998-8.914-8.914 0-4.915 3.999-8.914 8.914-8.914h30.551c4.915 0 8.914 3.998 8.914 8.914-.001 4.915-4 8.914-8.914 8.914zm-67.796 63.826h-.923c-7.295 0-14.538 2.396-20.393 6.748l-.968.72v-23.313l9.748-7.243c3.335-2.477 7.459-3.842 11.614-3.842h1.453c2.592 6.147 7.868 10.889 14.351 12.764-6.968 2.014-12.537 7.345-14.882 14.166zm21.056-.325c4.16 0 7.544 3.384 7.544 7.544s-3.384 7.544-7.544 7.544-7.544-3.384-7.544-7.544 3.384-7.544 7.544-7.544zm0-27.684c-4.16 0-7.544-3.384-7.544-7.544s3.384-7.544 7.544-7.544 7.544 3.384 7.544 7.544-3.384 7.544-7.544 7.544zm-12.815 99.997c2.4 0 4.352 1.952 4.352 4.352v31.225c0 2.4-1.953 4.352-4.352 4.352h-33.901c-2.4 0-4.352-1.952-4.352-4.352v-31.225c0-2.4 1.953-4.352 4.352-4.352zm126.601-282.936c.261.246 1.133.993 1.133 3.636 0 18.232.314 20.104-1.444 21.828-.607.595-2.31 1.456-7.004 1.739v-17.409c0-3.995-.321-7.915-.926-11.743 3.482.12 6.793.579 8.241 1.949zm-82.322-50.493c33.242 0 60.287 27.044 60.287 60.287v58.377c0 2.581-1.553 4.858-3.957 5.801l-21.124 8.282c-22.703 8.901-47.71 8.901-70.413 0l-21.124-8.282c-2.404-.942-3.957-3.219-3.957-5.801v-58.377c.001-33.243 27.046-60.287 60.288-60.287zm-82.011 75.957c-1.758-1.724-1.46-20.002-1.444-21.828.082-2.642.872-3.39 1.133-3.636 1.449-1.37 4.76-1.829 8.241-1.949-.604 3.828-.926 7.748-.926 11.743v17.411c-4.694-.282-6.397-1.146-7.004-1.741zm-44.091 243.794c-.4.286-1.235.708-2.317.334l-3.282-1.136c-7.263-2.51-12.142-9.36-12.142-17.044v-10.982h18.814v26.744c.001 1.148-.672 1.799-1.073 2.084zm14.426-49.394c-.838 3.442-3.898 5.847-7.441 5.847h-24.724v-51.438c0-13.89 3.162-27.858 9.144-40.395l16.244-34.041c4.291-8.992 10.934-16.678 19.21-22.225 4.278-2.867 8.888-5.096 13.707-6.668-2.578 4.772-3.988 10.181-3.988 15.846v3.803c0 4.065 3.295 7.36 7.36 7.36s7.36-3.295 7.36-7.36v-3.803c0-3.153.784-6.165 2.217-8.824 2.286 4.338 6.072 7.824 10.884 9.711l21.124 8.282c13.084 5.13 26.832 7.695 40.58 7.695s27.496-2.565 40.58-7.695l21.124-8.282c4.671-1.832 8.377-5.167 10.681-9.328 1.316 2.578 2.042 5.465 2.042 8.45l.083 68.747-8.655-10.444c-7.075-8.539-17.233-13.71-28.2-14.471-3.166-9.325-11.999-16.056-22.38-16.056h-30.551c-10.381 0-19.214 6.731-22.38 16.056-10.967.761-21.125 5.932-28.2 14.471l-8.949 10.799v-30.041c0-4.065-3.295-7.36-7.36-7.36s-7.36 3.295-7.36 7.36v10.162c-1.805 2.664-3.109 5.601-3.875 8.749zm86.19 184.543c0 1.894-1.541 3.435-3.435 3.435h-42.45c-1.894 0-3.435-1.541-3.435-3.435v-9.491c0-11.237 9.142-20.378 20.378-20.378h8.563c11.237 0 20.378 9.142 20.378 20.378v9.491zm18.679-57.881 6.249-86.645c.021-.29.266-.518.558-.518s.537.228.558.518l6.249 86.652c-4.53-.092-9.076-.099-13.614-.007zm81.612 57.881c0 1.894-1.541 3.435-3.435 3.435h-42.45c-1.894 0-3.435-1.541-3.435-3.435v-9.491c0-11.237 9.142-20.378 20.378-20.378h8.563c11.185 0 20.288 9.06 20.37 20.226zm14.669-45.625-.03-24.915c4.724-3.475 7.809-9.055 7.809-15.355v-31.225c0-6.333-3.115-11.939-7.881-15.409l-.095-81.614 7.438 30.374c-3.768 3.881-5.518 9.338-4.68 14.698.861 5.51 4.352 10.288 9.338 12.782l3.105 1.553c1.511.756 3.062 1.373 4.635 1.878v113.476c-6.483-2.287-13.032-4.375-19.639-6.243zm42.266-125.507c-5.495 5.371-13.803 6.673-20.675 3.233-2.209-1.01-6.385-2.739-3.748-5.668l14.359-14.037.002-.002 7.72-7.547c2.464-1.842 4.162-1.838 6.511.369l5.161 6.336c2.119 2.602 1.908 6.332-.492 8.677zm2.958-99.397c5.982 12.537 9.144 26.505 9.144 40.395v22.772c-2.97-2.192-6.532-3.526-10.273-3.738-1.913-.105-3.811.09-5.64.54-.16-.078-4.095-1.903-4.095-1.903v-80.834z"></path></g></g></svg>			</div>
+            </div>
+                    </div>
+                    </div>
+                    <div class="elementor-element elementor-element-d2fb7a7 elementor-widget elementor-widget-heading" data-id="d2fb7a7" data-element_type="widget" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                <h3 class="elementor-heading-title elementor-size-default">SISTEMA SOLAR</h3>		</div>    
+                <div class="elementor-element elementor-element-cb2e961 elementor-widget elementor-widget-text-editor" data-id="cb2e961" data-element_type="widget" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container text-center" id="bala">
+                        <div class="elementor-text-editor  elementor-size-default"><p>O Sistema Solar é um conjunto de corpos celestes que gravitam na órbita de um sol (uma estrela).</p>
+                    </div>
+                    </div>
+            </div>
+                            </div>
+                        </div>
+            </div>
+                                    </div>
+                        </div>
+            </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-deacf28 elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="deacf28" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div class="elementor-container elementor-column-gap-no">
+                                <div class="elementor-row">
+                        <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-532b1a3" data-id="532b1a3" data-element_type="column">
+                <div class="elementor-column-wrap">
+                                <div class="elementor-widget-wrap">
+                                    </div>
+                        </div>
+            </div>
+                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-783a841" data-id="783a841" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-239795e elementor-widget elementor-widget-image" data-id="239795e" data-element_type="widget" data-widget_type="image.default">
+                    <div class="elementor-widget-container">
+                    
+                    </div>
+                    </div>
+                    <div class="elementor-element elementor-element-eacaa3d elementor-widget elementor-widget-heading" data-id="eacaa3d" data-element_type="widget" data-widget_type="heading.default">
+                    
+                   
+                            </div>
+                        </div>
+            </div>
+                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-20ee322" data-id="20ee322" data-element_type="column">
+                <div class="elementor-column-wrap">
+                                <div class="elementor-widget-wrap">
+                                    </div>
+                        </div>
+            </div>
+                                    </div>
+                        </div>
+            </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-2625d51 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2625d51" data-element_type="section">
+                            <div class="elementor-container elementor-column-gap-default">
+                                <div class="elementor-row">
+                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-8b19caa" data-id="8b19caa" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-5ca301e elementor-view-default elementor-widget elementor-widget-icon" data-id="5ca301e" data-element_type="widget" data-widget_type="icon.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-icon-wrapper">
+                <div class="elementor-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Layer_1" x="0px" y="0px" viewBox="0 0 505.619 505.619" style="enable-background:new 0 0 505.619 505.619;" xml:space="preserve" width="512" height="512">
+    <g>
+        <g>
+            <path style="fill:#EFEFEF;" d="M160.484,121.655l16.921-9.022c8.315-4.434,18.661-1.284,23.095,7.031    c2.217,4.157,2.538,8.823,1.257,13c-1.265,4.182-4.131,7.877-8.288,10.094l-11.598,6.184"></path>
+            <path style="fill:#EFEFEF;" d="M181.87,148.942l11.598-6.184c8.315-4.434,18.661-1.284,23.095,7.031    c2.217,4.157,2.538,8.823,1.257,13c-1.265,4.182-4.131,7.877-8.288,10.094l-9.319,4.969"></path>
+            <path style="fill:#FFDC8D;" d="M103.793,278.368L64.143,204.01c-16.864-31.626-4.896-70.935,26.73-87.799l0,0    c31.626-16.864,70.935-4.896,87.799,26.73L194.167,172l73.69,71.324l-27.765,14.805l8.386,15.727    c16.32,30.607,4.739,68.65-25.869,84.97l-1.845,0.984c-31.626,16.864-70.936,4.896-87.799-26.73l-7.48-14.028"></path>
+            <path style="fill:#E8C57E;" d="M151.041,323.441l-7.48-14.028l-21.693-40.683l-39.65-74.359    c-15.224-28.55-6.946-63.356,18.074-82.264c-3.194,1.103-6.344,2.463-9.42,4.103l0,0c-31.626,16.864-43.594,56.173-26.73,87.799    l39.65,74.359l21.693,40.683l7.48,14.028c16.864,31.626,56.173,43.594,87.799,26.73l1.845-0.984c2.738-1.46,5.317-3.1,7.744-4.887    C200.485,364.77,166.425,352.292,151.041,323.441z"></path>
+            <path style="fill:#E8C57E;" d="M119.739,277.453c-12.222-3.721-25.146,3.171-28.867,15.392    c-3.721,12.222,3.171,25.146,15.392,28.867c12.222,3.721,25.146-3.171,28.867-15.392"></path>
+            <path style="fill:#EFEFEF;" d="M290.302,471.379c0,5.74-1.59,15.22-3.8,26.74h-141.37c-1.15-11.29-1.76-20.47-1.76-26.74    c0-52.98,12.96-95.91,65.94-95.91C262.282,375.469,290.302,418.399,290.302,471.379z"></path>
+            <path style="fill:#CCCCCC;" d="M225.492,376.914c-5.105-0.948-10.498-1.445-16.18-1.445c-52.98,0-65.94,42.93-65.94,95.91    c0,6.27,0.61,15.45,1.76,26.74h31.88c-1.15-11.29-1.76-20.47-1.76-26.74C175.252,424.083,185.583,384.799,225.492,376.914z"></path>
+            <circle style="fill:#78CAEF;" cx="181.872" cy="233.996" r="26.633"></circle>
+            <path style="fill:#EFEFEF;" d="M83.011,162.964l-58.243,31.056c-8.319,4.436-11.467,14.776-7.031,23.095l0,0    c4.436,8.319,14.776,11.467,23.095,7.031l58.243-31.056"></path>
+            <g>
+                <path style="fill:#EFEFEF;" d="M99.074,193.09l-49.419,26.351c-8.319,4.436-11.467,14.776-7.031,23.095l0,0     c4.436,8.319,14.776,11.467,23.095,7.031l49.419-26.351"></path>
+            </g>
+            <g>
+                
+                    <rect x="256.736" y="120.462" transform="matrix(0.8058 -0.5922 0.5922 0.8058 -22.4339 217.9462)" style="fill:#756E75;" width="128.622" height="45.423"></rect>
+                
+                    <rect x="263.462" y="140.968" transform="matrix(0.8058 -0.5922 0.5922 0.8058 -26.5466 223.7065)" style="fill:#595259;" width="128.622" height="22.712"></rect>
+                
+                    <rect x="251.593" y="151.185" transform="matrix(0.8058 -0.5922 0.5922 0.8058 -56.0337 193.9567)" style="fill:#756E75;" width="32.164" height="62.437"></rect>
+                
+                    <rect x="263.078" y="186.204" transform="matrix(0.8058 -0.5922 0.5922 0.8058 -63.0574 203.794)" style="fill:#595259;" width="32.164" height="23.65"></rect>
+                
+                    <rect x="348.209" y="41.844" transform="matrix(0.8058 -0.5922 0.5922 0.8058 37.6172 260.8214)" style="fill:#756E75;" width="136.456" height="62.437"></rect>
+                
+                    <rect x="359.975" y="77.718" transform="matrix(0.8058 -0.5922 0.5922 0.8058 30.4223 270.8986)" style="fill:#595259;" width="136.456" height="22.704"></rect>
+            </g>
+        </g>
+        <g>
+            <path d="M202.032,312.806c11.833,0,23.438-5.814,30.319-16.475c2.247-3.48,1.247-8.122-2.234-10.369    c-3.481-2.247-8.123-1.247-10.369,2.234c-6.286,9.738-19.322,12.546-29.06,6.26c-3.48-2.247-8.122-1.247-10.369,2.234    c-2.247,3.48-1.247,8.122,2.234,10.369C188.58,310.949,195.342,312.806,202.032,312.806z"></path>
+            <path d="M279.426,418.684c-3.852,1.524-5.738,5.882-4.213,9.734c5.036,12.722,7.589,27.177,7.589,42.961    c0,4.316-1.15,11.686-2.525,19.24H151.949c-0.708-7.985-1.078-14.557-1.078-19.24c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5    c0,6.533,0.605,15.785,1.799,27.5c0.39,3.828,3.614,6.74,7.461,6.74h141.37c3.597,0,6.688-2.554,7.366-6.087    c2.362-12.311,3.935-21.81,3.935-28.153c0-17.683-2.907-33.994-8.642-48.481C287.636,419.046,283.277,417.161,279.426,418.684z"></path>
+            <path d="M178.18,373.901c-8.878,3.892-16.39,9.687-22.466,17.367c-10.287,13.001-16.422,31.129-18.755,55.42    c-0.396,4.123,2.625,7.787,6.749,8.183c0.244,0.023,0.486,0.035,0.726,0.035c3.819,0,7.084-2.904,7.457-6.783    c2.049-21.328,7.147-36.881,15.587-47.548c9.374-11.847,23.058-17.606,41.834-17.606c17.348,0,32.207,4.943,44.165,14.69    c3.211,2.617,7.935,2.136,10.552-1.074s2.136-7.935-1.074-10.552c-12.134-9.892-26.55-15.748-42.956-17.497    c1.446-0.653,2.88-1.355,4.3-2.112l1.837-0.979c16.571-8.836,28.709-23.597,34.179-41.563c5.47-17.966,3.616-36.986-5.22-53.558    l-4.856-9.107l21.148-11.276c2.116-1.128,3.564-3.2,3.898-5.575c0.333-2.374-0.488-4.765-2.211-6.433l-60.244-58.309l0.233-0.124    c5.797-3.091,10.038-8.255,11.931-14.515c1.924-6.278,1.281-12.929-1.811-18.727c-3.118-5.847-8.281-9.915-14.139-11.805    c1.775-6.159,1.101-12.647-1.924-18.32c-6.375-11.955-21.286-16.494-33.242-10.121l-12.844,6.849    c-5.669-3.695-11.886-6.622-18.539-8.647c-18.499-5.632-38.083-3.723-55.145,5.376c-23.325,12.438-37.99,36.795-38.332,62.999    l-27.778,14.812c-5.791,3.088-10.033,8.246-11.944,14.525c-1.912,6.278-1.264,12.925,1.825,18.717    c4.417,8.283,12.931,13.007,21.722,13.006c0.101,0,0.202-0.008,0.303-0.009c-0.154,4.187,0.753,8.466,2.863,12.422    c3.088,5.792,8.246,10.034,14.525,11.945c2.365,0.72,4.782,1.077,7.187,1.077c3.978,0,7.92-0.977,11.53-2.901l49.418-26.351    c3.655-1.949,5.038-6.492,3.089-10.147c-1.949-3.655-6.491-5.037-10.147-3.089l-49.418,26.351    c-2.256,1.203-4.844,1.455-7.291,0.711c-2.445-0.745-4.455-2.397-5.658-4.653c-2.482-4.655-0.716-10.46,3.937-12.945    l49.424-26.354c0.228-0.122,0.448-0.254,0.658-0.395c2.104-1.412,3.295-3.753,3.314-6.172c0.009-1.209-0.274-2.438-0.883-3.58    c-1.949-3.655-6.493-5.037-10.147-3.089l-49.419,26.351c-0.003,0.001-0.006,0.003-0.009,0.005l-8.816,4.701    c-2.257,1.202-4.846,1.454-7.29,0.71c-2.446-0.745-4.455-2.397-5.658-4.653c-1.203-2.256-1.455-4.845-0.71-7.29    c0.745-2.446,2.396-4.455,4.652-5.657l58.243-31.057c3.655-1.949,5.038-6.492,3.089-10.147c-1.949-3.655-6.491-5.037-10.147-3.089    l-14.705,7.841c2.887-17.392,13.717-32.874,29.63-41.359c13.528-7.213,29.054-8.728,43.718-4.263    c14.665,4.465,26.713,14.373,33.926,27.901l15.496,29.062c0.368,0.689,0.841,1.317,1.402,1.86l28.301,27.392l-9.934,6.469    c-10.239-11.452-27.358-14.914-41.503-7.372c-14.333,7.643-20.984,24.119-16.846,39.165l-17.624,9.397    c-3.655,1.949-5.038,6.492-3.089,10.147c1.35,2.531,3.943,3.973,6.625,3.973c1.191,0,2.398-0.284,3.522-0.883l17.617-9.394    c4.173,4.86,9.637,8.455,15.914,10.366c3.287,1,6.644,1.496,9.985,1.496c5.525,0,11.002-1.357,16.016-4.03    c14.512-7.738,21.157-24.531,16.695-39.726l13.678-8.908l26.935,26.07l-18.679,9.96c-1.755,0.936-3.067,2.531-3.646,4.434    c-0.58,1.903-0.379,3.958,0.557,5.713l8.385,15.726c6.951,13.036,8.41,27.998,4.107,42.131    c-4.303,14.133-13.852,25.745-26.888,32.696l-1.837,0.979c-27.928,14.892-62.765,4.291-77.654-23.633l-4.613-8.651    c3.298-3.386,5.865-7.576,7.334-12.401c1.207-3.963-1.028-8.153-4.99-9.359c-3.965-1.206-8.153,1.027-9.359,4.99    c-2.51,8.247-11.26,12.912-19.508,10.402c-3.994-1.216-7.276-3.915-9.241-7.6s-2.377-7.914-1.161-11.909    c1.216-3.994,3.915-7.276,7.6-9.241c3.684-1.965,7.912-2.377,11.908-1.161c3.962,1.205,8.153-1.028,9.359-4.99    c1.207-3.962-1.028-8.153-4.99-9.359c-4.744-1.444-9.655-1.709-14.396-0.842l-7.613-14.276c-1.949-3.655-6.493-5.038-10.146-3.089    c-3.655,1.949-5.038,6.492-3.089,10.146l7.174,13.453c-4.796,3.824-8.331,8.995-10.156,14.99    c-2.383,7.828-1.576,16.115,2.274,23.335c3.85,7.22,10.281,12.509,18.108,14.892c2.962,0.902,5.957,1.331,8.904,1.331    c3.153,0,6.247-0.503,9.19-1.433l4.174,7.828C137.306,357.161,156.824,370.271,178.18,373.901z M200.175,239.568    c-1.489,4.889-4.792,8.906-9.301,11.311c-4.509,2.404-9.686,2.909-14.574,1.42c-4.888-1.488-8.903-4.79-11.308-9.297    c-0.001-0.001-0.001-0.003-0.002-0.004s-0.002-0.002-0.002-0.004c-4.96-9.309-1.426-20.918,7.882-25.881    c2.859-1.525,5.935-2.248,8.97-2.248c6.844,0,13.476,3.679,16.915,10.128C201.159,229.503,201.664,234.679,200.175,239.568z     M210.642,160.618c-0.738,2.44-2.386,4.446-4.639,5.648l-4.499,2.399l-1.277-1.236l-8.211-15.398l4.98-2.656    c0.001,0,0.001-0.001,0.002-0.001c4.657-2.481,10.464-0.713,12.946,3.943C211.147,155.571,211.397,158.154,210.642,160.618z     M180.934,119.25c4.658-2.483,10.464-0.714,12.948,3.942c1.201,2.253,1.451,4.836,0.696,7.301    c-0.738,2.44-2.385,4.445-4.638,5.647l-4.995,2.663c-3.143-5.763-6.989-10.989-11.424-15.6L180.934,119.25z"></path>
+            <path d="M495.945,53.368L458.967,3.059c-2.454-3.337-7.148-4.054-10.485-1.602l-48.96,35.986    c-3.337,2.453-4.055,7.147-1.602,10.485c2.454,3.336,7.147,4.053,10.485,1.602l42.917-31.544l28.094,38.223l-97.865,71.931    l-27.493-37.404c-0.002-0.002-0.003-0.005-0.005-0.007s-0.004-0.004-0.006-0.007l-0.591-0.804l34.977-25.708    c3.337-2.453,4.055-7.147,1.602-10.485c-2.454-3.337-7.148-4.054-10.485-1.602l-41.02,30.149    c-1.603,1.178-2.672,2.945-2.972,4.911s0.193,3.971,1.371,5.574l0.596,0.812l-68.742,50.525l-0.596-0.811    c-1.178-1.603-2.944-2.672-4.911-2.972c-1.965-0.3-3.971,0.193-5.574,1.371l-25.917,19.049c-3.337,2.453-4.055,7.147-1.602,10.485    l36.977,50.309c1.47,2,3.744,3.059,6.049,3.059c1.542,0,3.098-0.474,4.436-1.457l25.917-19.049    c1.603-1.178,2.672-2.945,2.972-4.911s-0.193-3.971-1.371-5.574l-0.596-0.811l12.615-9.272c3.337-2.453,4.055-7.147,1.602-10.485    c-2.454-3.337-7.148-4.054-10.485-1.602l-12.615,9.272l-18.018-24.514l68.742-50.525l27.497,37.411    c1.47,2,3.744,3.059,6.049,3.059c1.542,0,3.098-0.474,4.436-1.457l109.951-80.815c1.603-1.178,2.672-2.944,2.972-4.911    S497.123,54.971,495.945,53.368z M274.806,206.597l-28.094-38.223l13.83-10.166l7.644,10.4l19.853,27.011    c0.001,0.002,0.003,0.004,0.005,0.006l0.592,0.805L274.806,206.597z"></path>
+            <path d="M366.804,144.737l-9.721-18.794c-1.902-3.679-6.428-5.119-10.107-3.216c-3.679,1.903-5.119,6.428-3.216,10.107    l9.721,18.794c0.809,1.563,0.635,3.378-0.289,4.756l-13.57-25.517c-1.945-3.657-6.486-5.045-10.144-3.101    c-3.657,1.945-5.045,6.486-3.101,10.144l14.097,26.508c-1.31,0.542-2.498,0.339-3.138,0.144c-0.739-0.226-2.094-0.847-2.865-2.474    l-3.273-6.91c-1.772-3.743-6.246-5.34-9.988-3.567c-3.744,1.773-5.341,6.245-3.567,9.988l3.272,6.91    c2.366,4.995,6.755,8.786,12.041,10.399c1.875,0.573,3.809,0.855,5.737,0.855c2.052,0,4.095-0.329,6.052-0.96    c9.818,40.424,10.722,77.797,2.665,111.262c-7.108,29.528-21.199,56.189-41.879,79.242    c-35.412,39.475-78.527,55.023-79.287,55.292c-3.911,1.364-5.976,5.64-4.613,9.551c1.079,3.094,3.98,5.033,7.082,5.033    c0.819,0,1.652-0.135,2.469-0.42c1.898-0.662,46.928-16.691,85.077-58.953c22.502-24.928,37.856-53.804,45.636-85.825    c8.992-37.014,7.786-78.237-3.562-122.667l1.035-0.615C368.322,165.389,371.588,153.983,366.804,144.737z"></path>
+            <path d="M260.277,375.846c1.466,1.477,3.395,2.217,5.324,2.217c1.91,0,3.82-0.725,5.283-2.176    c38.692-38.398,46.574-79.385,46.372-107.007c-0.219-29.964-9.619-50.753-10.019-51.623c-1.727-3.757-6.167-5.398-9.929-3.682    c-3.761,1.72-5.417,6.167-3.707,9.932c0.086,0.189,8.595,19.219,8.659,46.125c0.084,35.738-14.027,67.905-41.942,95.607    C257.377,368.157,257.359,372.905,260.277,375.846z"></path>
+            <path d="M453.422,330.889h-16.5v-16.5c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16.5h-16.5c-4.142,0-7.5,3.358-7.5,7.5    s3.358,7.5,7.5,7.5h16.5v16.5c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-16.5h16.5c4.142,0,7.5-3.358,7.5-7.5    S457.564,330.889,453.422,330.889z"></path>
+            <path d="M222.422,72.889h16.5v16.5c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-16.5h16.5c4.142,0,7.5-3.358,7.5-7.5    s-3.358-7.5-7.5-7.5h-16.5v-16.5c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v16.5h-16.5c-4.142,0-7.5,3.358-7.5,7.5    S218.28,72.889,222.422,72.889z"></path>
+            <path d="M28.422,66.389h29v29c0,4.142,3.358,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-29h29c4.142,0,7.5-3.358,7.5-7.5s-3.358-7.5-7.5-7.5    h-29v-29c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v29h-29c-4.142,0-7.5,3.358-7.5,7.5S24.28,66.389,28.422,66.389z"></path>
+            <path d="M446.186,264.548c3.692,5.609,12.666,3.564,13.654-3.057c0.985-6.597-6.819-11.049-12.034-7.01    C444.76,256.84,444.027,261.351,446.186,264.548z"></path>
+            <path d="M324.496,50.619c1.207,2.922,4.225,4.822,7.388,4.623c3.096-0.195,5.807-2.345,6.711-5.312    c1.952-6.403-5.204-11.998-10.963-8.642C324.459,43.136,323.063,47.222,324.496,50.619z"></path>
+            <path d="M74.346,362.518c-1.194-2.83-4.024-4.704-7.109-4.625c-3.072,0.078-5.834,2.076-6.875,4.968    c-2.348,6.524,5.072,12.534,10.975,8.925C74.432,369.894,75.761,365.869,74.346,362.518z"></path>
+        </g>
+    </g>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </svg>			</div>
+            </div>
+                    </div>
+                    </div>
+                    <div class="elementor-element elementor-element-e04da06 elementor-widget elementor-widget-heading" data-id="e04da06" data-element_type="widget" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                <h3 class="elementor-heading-title elementor-size-default">-PLANETAS-</h3>		</div>
+                    </div>
+                            </div>
+                        </div>
+            </div>
+                                    </div>
+                        </div>
+            </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-781bb56 elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="781bb56" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div class="elementor-container elementor-column-gap-no">
+                                <div class="elementor-row">
+                        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7b46fa5" data-id="7b46fa5" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-29f4a65 elementor-widget elementor-widget-image" data-id="29f4a65" data-element_type="widget" data-widget_type="image.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-image" style="width: 425px; height: 425;">
+                                            <img width="750" height="500" src="ima/mercurio.jpg"  sizes="(max-width: 750px) 100vw, 750px">											</div>
+                    </div>
+                    </div>
+                    <div class="elementor-element elementor-element-e5fbc96 elementor-widget elementor-widget-heading" data-id="e5fbc96" data-element_type="widget" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                <h4 class="elementor-heading-title elementor-size-default">MERCÚRIO</h4>		</div>
+                    </div>
+                    <div class="elementor-element elementor-element-0a70658 elementor-widget elementor-widget-text-editor" data-id="0a70658" data-element_type="widget" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-text-editor elementor-clearfix"><p>Mercúrio é o planeta mais próximo do sol. É um planeta rochoso, destituído de satélites e atmosfera rarefeita, sendo também o menor planeta do sistema solar. Por esse motivo apresenta temperaturas bastante elevadas de aproximadamente 400°C.
+
+                            Por outro lado, a face do planeta não iluminada pelo sol pode atingir temperaturas de aproximadamente -170 °C. O movimento de rotação do planeta é de 59 dias, enquanto o de translação é de 87 dias</p></div>
+                    </div>
+                    </div>
+                            </div>
+                        </div>
+            </div>
+                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-de64ce6" data-id="de64ce6" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-fa9025d elementor-widget elementor-widget-image" data-id="fa9025d" data-element_type="widget" data-widget_type="image.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-image" style="width: 425px; height: 425;">
+                                            <img width="750" height="500" src="ima/venus.jpg" class="attachment-full size-full" alt="" loading="lazy" sizes="(max-width: 750px) 20vw, 750px">											</div>
+                    </div>
+                    </div>
+                    <div class="elementor-element elementor-element-12631d3 elementor-widget elementor-widget-heading" data-id="12631d3" data-element_type="widget" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                <h4 class="elementor-heading-title elementor-size-default">VÊNUS</h4>		</div>
+                    </div>
+                    <div class="elementor-element elementor-element-701def3 elementor-widget elementor-widget-text-editor" data-id="701def3" data-element_type="widget" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-text-editor elementor-clearfix"><p>Conhecido como “Estrela D’Alva”, por causa de seu forte brilho, Vênus tal qual Mercúrio é um planeta que não possui satélite. Visível do nosso planeta, Vênus é o segundo planeta a partir do sol e o mais perto do planeta Terra.
+
+                            Seu movimento de rotação é um dos mais lentos, com 243 dias para completar a volta em torno se si mesmo; e, o movimento de translação de 225 dias aproximadamente.</p></div>
+                    </div>
+                    </div>
+                            </div>
+                        </div>
+            </div>
+                                    </div>
+                        </div>
+            </section>
+
+
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-781bb56 elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="781bb56" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                <div class="elementor-container elementor-column-gap-no">
+                    <div class="elementor-row">
+            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7b46fa5" data-id="7b46fa5" data-element_type="column">
+    <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                <div class="elementor-element elementor-element-29f4a65 elementor-widget elementor-widget-image" data-id="29f4a65" data-element_type="widget" data-widget_type="image.default">
+        <div class="elementor-widget-container">
+            <div class="elementor-image" style="width: 425px; height: 425;">
+                <img width="750" height="500" src="ima/terra.jpg" class="attachment-full size-full" alt="" loading="lazy" sizes="(max-width: 750px) 100vw, 750px">											</div>
+        </div>
+        </div>
+        <div class="elementor-element elementor-element-e5fbc96 elementor-widget elementor-widget-heading" data-id="e5fbc96" data-element_type="widget" data-widget_type="heading.default">
+        <div class="elementor-widget-container">
+    <h4 class="elementor-heading-title elementor-size-default">TERRA</h4>		</div>
+        </div>
+        <div class="elementor-element elementor-element-0a70658 elementor-widget elementor-widget-text-editor" data-id="0a70658" data-element_type="widget" data-widget_type="text-editor.default">
+        <div class="elementor-widget-container">
+            <div class="elementor-text-editor elementor-clearfix"><p>A Terra é o terceiro planeta do Sistema Solar, o único que apresenta água em estado líquido e oxigênio em sua atmosfera, o que possibilita a vida no planeta.
+
+                O movimento de rotação da Terra dura 23 horas, 56 minutos e 04 segundos e o ano terrestre é de aproximadamente 365 dias e 6 horas. A temperatura média da Terra é de 14ºC.</p></div>
+        </div>
+        </div>
+                </div>
+            </div>
+</div>
+        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-de64ce6" data-id="de64ce6" data-element_type="column">
+    <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                <div class="elementor-element elementor-element-fa9025d elementor-widget elementor-widget-image" data-id="fa9025d" data-element_type="widget" data-widget_type="image.default">
+        <div class="elementor-widget-container">
+            <div class="elementor-image" style="width: 425px; height: 425;">
+                <img width="650" height="400" src="ima/marte.jpg" class="attachment-full size-full" alt="" loading="lazy" sizes="(max-width: 750px) 100vw, 750px">											</div>
+        </div>
+        </div>
+        <div class="elementor-element elementor-element-12631d3 elementor-widget elementor-widget-heading" data-id="12631d3" data-element_type="widget" data-widget_type="heading.default">
+        <div class="elementor-widget-container">
+    <h4 class="elementor-heading-title elementor-size-default">MARTE</h4>		</div>
+        </div>
+        <div class="elementor-element elementor-element-701def3 elementor-widget elementor-widget-text-editor" data-id="701def3" data-element_type="widget" data-widget_type="text-editor.default">
+        <div class="elementor-widget-container">
+            <div class="elementor-text-editor elementor-clearfix"><p>Marte é o segundo menor planeta do sistema solar. É conhecido como "planeta vermelho" pela coloração de sua superfície. Marte possui duas luas em sua órbita chamadas de Fobos e Deimos.
+                O ano em Marte dura 687 dias terrestres e o dia marciano é muito parecido com o da Terra, 24 horas e 35 minutos. Sua temperatura média é de -63ºC.</p></div>
+        </div>
+        </div>
+                </div>
+            </div>
+</div>
+                        </div>
+            </div>
+</section>
+
+
+<section class="elementor-section elementor-top-section elementor-element elementor-element-781bb56 elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="781bb56" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                            <div class="elementor-container elementor-column-gap-no">
+                                <div class="elementor-row">
+                        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7b46fa5" data-id="7b46fa5" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-29f4a65 elementor-widget elementor-widget-image" data-id="29f4a65" data-element_type="widget" data-widget_type="image.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-image" style="width: 425px; height: 425;">
+                            <img width="750" height="500" src="ima/jupiter.jpg" class="attachment-full size-full" alt="" loading="lazy" sizes="(max-width: 750px) 100vw, 750px">											</div>
+                    </div>
+                    </div>
+                    <div class="elementor-element elementor-element-e5fbc96 elementor-widget elementor-widget-heading" data-id="e5fbc96" data-element_type="widget" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                <h4 class="elementor-heading-title elementor-size-default">JÚPITER</h4>		</div>
+                    </div>
+                    <div class="elementor-element elementor-element-0a70658 elementor-widget elementor-widget-text-editor" data-id="0a70658" data-element_type="widget" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-text-editor elementor-clearfix"><P>Júpiter é o maior planeta do Sistema Solar, a área da superfície é mais de 120 vezes maior que a Terra. Formado principalmente pelos gases hidrogênio, hélio e metano e, ainda, um pequeno núcleo sólido no interior. A temperatura média do planeta é de -108ºC.
+                            O ano de Júpiter dura 11,86 anos terrestres e o dia tem a duração de 9 horas e 50 minutos. Júpiter possui 79 luas, a maior delas, Ganimedes, possui um diâmetro superior ao planeta Mercúrio.</P></div>
+                    </div>
+                    </div>
+                            </div>
+                        </div>
+            </div>
+                    <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-de64ce6" data-id="de64ce6" data-element_type="column">
+                <div class="elementor-column-wrap elementor-element-populated">
+                                <div class="elementor-widget-wrap">
+                            <div class="elementor-element elementor-element-fa9025d elementor-widget elementor-widget-image" data-id="fa9025d" data-element_type="widget" data-widget_type="image.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-image" style="width: 425px; height: 425;">
+                            <img width="750" height="500" src="ima/saturno.jpg" class="attachment-full size-full" alt="" loading="lazy" sizes="(max-width: 750px) 100vw, 750px">											</div>
+                    </div>
+                    </div>
+                    <div class="elementor-element elementor-element-12631d3 elementor-widget elementor-widget-heading" data-id="12631d3" data-element_type="widget" data-widget_type="heading.default">
+                    <div class="elementor-widget-container">
+                <h4 class="elementor-heading-title elementor-size-default">SATURNO</h4>		</div>
+                    </div>
+                    <div class="elementor-element elementor-element-701def3 elementor-widget elementor-widget-text-editor" data-id="701def3" data-element_type="widget" data-widget_type="text-editor.default">
+                    <div class="elementor-widget-container">
+                        <div class="elementor-text-editor elementor-clearfix"><p>Saturno é o segundo maior planeta do Sistema Solar. É conhecido pelos anéis formados principalmente por gelo e poeira cósmica. O diâmetro do planeta é de cerca de 100 000 km e nos anéis chega a 270 000 km, com apenas 150 metros de espessura.
+                            É composto, basicamente, de Hidrogênio (96%) e Hélio (3%). Sua temperatura média é de -139ºC. O Ano de Saturno dura 29,5 anos terrestres e o dia cerca de 10 horas e 35 minutos.</p></div>
+                    </div>
+                    </div>
+                            </div>
+                        </div>
+            </div>
+                                    </div>
+                        </div>
+            </section>
+
+            <section class="elementor-section elementor-top-section elementor-element elementor-element-781bb56 elementor-section-content-top elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="781bb56" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                <div class="elementor-container elementor-column-gap-no">
+                    <div class="elementor-row">
+            <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7b46fa5" data-id="7b46fa5" data-element_type="column">
+    <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                <div class="elementor-element elementor-element-29f4a65 elementor-widget elementor-widget-image" data-id="29f4a65" data-element_type="widget" data-widget_type="image.default">
+        <div class="elementor-widget-container">
+            <div class="elementor-image"style="width: 425px; height: 425;">
+                <img width="750" height="500" src="ima/urano.jpg" class="attachment-full size-full" alt="" loading="lazy" sizes="(max-width: 750px) 100vw, 750px">											</div>
+        </div>
+        </div>
+        <div class="elementor-element elementor-element-e5fbc96 elementor-widget elementor-widget-heading" data-id="e5fbc96" data-element_type="widget" data-widget_type="heading.default">
+        <div class="elementor-widget-container">
+    <h4 class="elementor-heading-title elementor-size-default">URANO</h4>		</div>
+        </div>
+        <div class="elementor-element elementor-element-0a70658 elementor-widget elementor-widget-text-editor" data-id="0a70658" data-element_type="widget" data-widget_type="text-editor.default">
+        <div class="elementor-widget-container">
+            <div class="elementor-text-editor elementor-clearfix"><p>Urano é um planeta gasoso e sua atmosfera é constituída, principalmente, de hidrogênio, hélio e metano, com muita formação de gelo. É o planeta com a superfície mais fria do Sistema Solar, sua temperatura média é de -220 ºC.
+                Uma particularidade de Urano é a inclinação de seu eixo, praticamente horizontal (97º), faz com que o planeta gire de lado em relação aos outros astros. A duração do ano de Urano é de 84 anos terrestres e o dia possui 17 horas e 14 minutos.
+                Por conta de sua posição em relação ao Sol, seus polos passam 42 anos (terrestres) iluminados seguidos de 42 anos de escuridão.</p></div>
+        </div>
+        </div>
+                </div>
+            </div>
+</div>
+        <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-de64ce6" data-id="de64ce6" data-element_type="column">
+    <div class="elementor-column-wrap elementor-element-populated">
+                    <div class="elementor-widget-wrap">
+                <div class="elementor-element elementor-element-fa9025d elementor-widget elementor-widget-image" data-id="fa9025d" data-element_type="widget" data-widget_type="image.default">
+        <div class="elementor-widget-container">
+            <div class="elementor-image"style="width: 425px; height: 425;">
+                <img width="750" height="500" src="ima/netuno.jpg" class="attachment-full size-full" alt="" loading="lazy" sizes="(max-width: 750px) 100vw, 750px">											</div>
+        </div>
+        </div>
+        <div class="elementor-element elementor-element-12631d3 elementor-widget elementor-widget-heading" data-id="12631d3" data-element_type="widget" data-widget_type="heading.default">
+        <div class="elementor-widget-container">
+    <h4 class="elementor-heading-title elementor-size-default">NETUNO</h4>		</div>
+        </div>
+        <div class="elementor-element elementor-element-701def3 elementor-widget elementor-widget-text-editor" data-id="701def3" data-element_type="widget" data-widget_type="text-editor.default">
+        <div class="elementor-widget-container">
+            <div class="elementor-text-editor elementor-clearfix"><p>Netuno é o planeta mais distante do Sol. Um gigante gasoso, tal como Júpiter, Saturno e Urano. O planeta possui uma intensa atividade em sua superfície com os ventos mais fortes do Sistema Solar, chegando a 2000 km/h.
+                O dia de Netuno dura cerca de 17 horas terrestres e o ano 164,79 anos na Terra. Sua temperatura média é de -201 ºC.</p></div>
+        </div>
+        </div>
+                </div>
+            </div>
+</div>
+                        </div>
+            </div>
+</section>
+<div class="elementor-element elementor-element-f100d5f elementor-widget-divider--separator-type-pattern elementor-widget-divider--no-spacing elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="f100d5f" data-element_type="widget" data-widget_type="divider.default">
+    <div class="elementor-widget-container">
+        <div class="elementor-divider" style="--divider-pattern-url: url(&quot;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' preserveAspectRatio='xMidYMid meet' overflow='visible' height='100%' viewBox='0 0 120 26' fill='black' stroke='none'%3E%3Cpath d='M54,1.6V26h-9V2.5L54,1.6z M69,1.6v23.3L60,26V1.6H69z M24,1.6v23.5l-9-0.6V1.6H24z M30,0l9,0.7v24.5h-9V0z M9,2.5v22H0V3.7L9,2.5z M75,1.6l9,0.9v22h-9V1.6z M99,2.7v21.7h-9V3.8L99,2.7z M114,3.8v20.7l-9-0.5V3.8L114,3.8z'/%3E%3C/svg%3E&quot;);">
+<span class="elementor-divider-separator">
+            </span>
+</div>
+    </div>
+    </div>
+                   
+    
+    
+        <!-- #page -->
+    <script id="astra-theme-js-js-extra">
+    var astra = {"break_point":"921","isRtl":""};
+    </script>
+    <script src="https://astrolab.club/wp-content/themes/astra/assets/js/minified/style.min.js?ver=3.0.1" id="astra-theme-js-js"></script>
+    <script id="astra-addon-js-js-extra">
+    var astraAddon = {"sticky_active":"","is_header_builder_active":""};
+    </script>
+    <script src="https://astrolab.club/wp-content/uploads/astra-addon/astra-addon-6008e40baaab81-59410642.js?ver=3.0.0" id="astra-addon-js-js"></script>
+    <script src="https://astrolab.club/wp-includes/js/wp-embed.min.js?ver=5.6.6" id="wp-embed-js"></script>
+    <script src="https://astrolab.club/wp-includes/js/jquery/jquery.min.js?ver=3.5.1" id="jquery-core-js"></script>
+    <script src="https://astrolab.club/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+    <script src="https://astrolab.club/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.0.16" id="elementor-frontend-modules-js"></script>
+    <script src="https://astrolab.club/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.0.10" id="elementor-sticky-js"></script>
+    <script id="elementor-pro-frontend-js-before">
+    var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/astrolab.club\/wp-admin\/admin-ajax.php","nonce":"68afa6abff","i18n":{"toc_no_headings_found":"No headings were found on this page."},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"google":{"title":"Google+","has_counter":true},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"}},"facebook_sdk":{"lang":"pt_BR","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/astrolab.club\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+    </script>
+    <script src="https://astrolab.club/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.0.10" id="elementor-pro-frontend-js"></script>
+    <script src="https://astrolab.club/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1" id="jquery-ui-core-js"></script>
+    <script src="https://astrolab.club/wp-content/plugins/elementor/assets/lib/dialog/dialog.min.js?ver=4.8.1" id="elementor-dialog-js"></script>
+    <script src="https://astrolab.club/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2" id="elementor-waypoints-js"></script>
+    <script src="https://astrolab.club/wp-content/plugins/elementor/assets/lib/swiper/swiper.min.js?ver=5.3.6" id="swiper-js"></script>
+    <script src="https://astrolab.club/wp-content/plugins/elementor/assets/lib/share-link/share-link.min.js?ver=3.0.16" id="share-link-js"></script>
+    <script id="elementor-frontend-js-before">
+    var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false},"i18n":{"shareOnFacebook":"Compartilhar no Facebook","shareOnTwitter":"Compartilhar no Twitter","pinIt":"Fixar","download":"Baixar","downloadImage":"Baixar imagem","fullscreen":"Tela cheia","zoom":"Zoom","share":"Compartilhar","playVideo":"Reproduzir v\u00eddeo","previous":"Anterior","next":"Pr\u00f3ximo","close":"Fechar"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"version":"3.0.16","is_static":false,"legacyMode":{"elementWrappers":true},"urls":{"assets":"https:\/\/astrolab.club\/wp-content\/plugins\/elementor\/assets\/"},"settings":{"page":[],"editorPreferences":[]},"kit":{"body_background_background":"classic","global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":361,"title":"PROJETOS%20%E2%80%93%20Astrolab","excerpt":"","featuredImage":false}};
+    </script>
+    <script src="https://astrolab.club/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.0.16" id="elementor-frontend-js"></script><span id="elementor-device-mode" class="elementor-screen-only"></span>
+    <script src="https://astrolab.club/wp-includes/js/underscore.min.js?ver=1.8.3" id="underscore-js"></script>
+    <script id="wp-util-js-extra">
+    var _wpUtilSettings = {"ajax":{"url":"\/wp-admin\/admin-ajax.php"}};
+    </script>
+    <script src="https://astrolab.club/wp-includes/js/wp-util.min.js?ver=5.6.6" id="wp-util-js"></script>
+    <script id="wpforms-elementor-js-extra">
+    var wpformsElementorVars = {"captcha_provider":"recaptcha","recaptcha_type":"v2"};
+    </script>
+    <script src="https://astrolab.club/wp-content/plugins/wpforms-lite/assets/js/integrations/elementor/frontend.min.js?ver=1.6.4.1" id="wpforms-elementor-js"></script>
+                <script>
+                /(trident|msie)/i.test(navigator.userAgent)&&document.getElementById&&window.addEventListener&&window.addEventListener("hashchange",function(){var t,e=location.hash.substring(1);/^[A-z0-9_-]+$/.test(e)&&(t=document.getElementById(e))&&(/^(?:a|select|input|button|textarea)$/i.test(t.tagName)||(t.tabIndex=-1),t.focus())},!1);
+                </script>
+                            <script type="text/javascript" id="uagb-script-frontend">document.addEventListener("DOMContentLoaded", function(){( function( $ ) {  })(jQuery)})</script>
+                   
+                            
+ <!-- para o botão funcionar -->
+ <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+ integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+ crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+ integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+ crossorigin="anonymous"></script>
+<!-- final da página -->
+
+
+
+
+    
+    </body></html>
